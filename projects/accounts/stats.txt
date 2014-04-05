@@ -1,0 +1,14 @@
+How to get statistics on lab usage
+
+On lab NT server, run 'usrstat' tool from NT server resource kit and
+save output to a file. On Linux system, do the following to the
+resulting file:
+
+How many accounts exist
+wc -l results.txt
+
+How many accounts never used
+grep Never results.txt | wc -l
+
+The difference between the two is how many accounts were used one
+or more times.

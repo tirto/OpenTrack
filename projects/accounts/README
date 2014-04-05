@@ -1,0 +1,63 @@
+Engineering students account creation
+
+SUMMARY:
+
+The program 'accounts' will extract a list of all students taking
+atleast one engineering course for a specified term and allows for
+creation of Windows NT accounts in a batch operation. The list
+produced by the 'accounts' program is in a comma seperated form to be
+used with the 'addusers' program which comes as part of the Windows NT
+resource kit to do the actual creation and deletion of accounts.
+
+LIST EXTRACTION:
+
+Run the 'accounts' program on a Linux system with access to the data
+warehouse. The program requires two parameters, a 'term code' and
+filename to save the list into. The 'term code' is a 3 digit code
+consisting of a 2 digit year and 1 digit session. For example, 004
+stands for the fall 2000 session and 012 stands for the spring 2001
+session. Also consider students in the special session codes 015 and
+016 for spring special 2001 and fall special 2001 respectively. Eg:
+
+./accounts 012 acct.txt
+
+It may be necessary to convert the resulting text file into dos text
+format using a unix2dos program. This can be done in emacs or
+Microsoft word or write will automatically do it.
+
+ACCOUNT CREATION:
+
+Run the 'addusers' program on the Windows NT server to create the
+accounts. To create the accounts, type:
+
+addusers /c acct.txt
+
+After users are added, run the 'times' script to set the allowable
+access times for the users. There maybe some benign errors near the
+end of execution of this script which can be ignored. Eg:
+
+times.bat acct.txt
+
+To erase the accounts, type:
+
+addusers /e acct.txt
+
+ACCOUNT INFO:
+
+For each engineering student, an account is created with their SID and
+their name. The username is their fullname, and a password formed
+from their birthdate in the pattern "MMDDYY" and the global group
+'StudentGG'.
+
+ACCOUNT UPDATE:
+
+Run the 'acctdiff' program to create a list an amended list of users
+since the last time it was run. This is done by comparing the current
+database with a previously created account file and creating a new
+account file with only the newer users. Eq:
+
+./acctdiff 012 acct-old.txt acct-new.txt
+
+It may be necessary to convert the resulting text file into dos text
+format using a unix2dos program. This can be done in emacs or
+Microsoft word or write will automatically do it.

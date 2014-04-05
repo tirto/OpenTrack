@@ -1,0 +1,9 @@
+wh_term
+    trm_sid		9	<ANY>
+    trm_term		3	CURRENT
+    trm_college		02	52
+    trm_career		02	GR, UG
+    trm_major_1		4	ALL ENG MAJORS
+    trm_degree		3	BS, MS
+    trm_minor		4	<NOT NEEDED>
+    trm_class		3	FR, SO, JR, SR

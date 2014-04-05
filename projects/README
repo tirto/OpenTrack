@@ -1,0 +1,15 @@
+accounts - account generation code
+backup - some periodic backups of code (maybe delete?)
+chem - some scripts to obtain chem engr student info
+chem-bio - some scripts to obtain student who take chemistry
+faculty - search LDAP for faculty info and compare locally
+graphs - some preliminary work to aggregate and graph jobtrack data
+html - some very old code backups (maybe delete?)
+jobtrack - relationship graph of jobtrack super code
+misc - miscelaneous projects and scripts
+money - some code since integrate into jobtrack for tracking money
+scott - some scripts used for scott to find students taking ee98
+srjr - some scripts to find engr sr and jrs. useful file test.sql
+summer - finds courses offered over summer. Integrated into scheduler
+swe - produces a women engineering students mailing list
+

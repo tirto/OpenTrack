@@ -1,0 +1,27 @@
+[User]
+aphal87322,Abolt Aphale,030166,,E:,\\COELABS-1\Workstation,,
+datta47882,Balasubraman Dattatri,020669,,E:,\\COELABS-1\Workstation,,
+dutta10171,Ranjan Dutta,040968,,E:,\\COELABS-1\Workstation,,
+fang63832,Dalang Fang,121271,,E:,\\COELABS-1\Workstation,,
+goodp09520,James R. Goodpaster,120160,,E:,\\COELABS-1\Workstation,,
+kand66711,Shreenivas Kand,021772,,E:,\\COELABS-1\Workstation,,
+karni24535,Pushkar S Karnik,010219,,E:,\\COELABS-1\Workstation,,
+lee06247,Yong Lee,022269,,E:,\\COELABS-1\Workstation,,
+lee85111,Tom Lee,070869,,E:,\\COELABS-1\Workstation,,
+li14585,Yan Li,021770,,E:,\\COELABS-1\Workstation,,
+mathe20527,Beulah Annie Mathew,122572,,E:,\\COELABS-1\Workstation,,
+patil38477,Nitin Patil,072674,,E:,\\COELABS-1\Workstation,,
+pendy25692,Vishnu Srinivas Pendyala,050168,,E:,\\COELABS-1\Workstation,,
+river77602,Uriel Rivera,072676,,E:,\\COELABS-1\Workstation,,
+verma89260,Savita Arora Verma,082572,,E:,\\COELABS-1\Workstation,,
+wong75829,Anthony Wong,051767,,E:,\\COELABS-1\Workstation,,
+xu56239,Jing Xu,042471,,E:,\\COELABS-1\Workstation,,
+yuan57069,Yu Yuan,041072,,E:,\\COELABS-1\Workstation,,
+zhang58864,Yuzhe Zhang,032767,,E:,\\COELABS-1\Workstation,,
+[Global]
+StudentGG,Engineering 
+students,aphal87322,datta47882,dutta10171,fang63832,goodp09520,kand66711,karni24
+535,lee06247,lee85111,li14585,mathe20527,patil38477,pendy25692,river77602,verma8
+9260,wong75829,xu56239,yuan57069,zhang58864,
+[Local]
+

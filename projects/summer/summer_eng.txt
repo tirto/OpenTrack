@@ -1,0 +1,149 @@
+AE   180  01  INDIVIDUAL STUDIES                                           
+AE   180  02  INDIVIDUAL STUDIES                                           
+AE   180  03  INDIVIDUAL STUDIES                                           
+AE   180  04  INDIVIDUAL STUDIES                                           
+AE   180  05  INDIVIDUAL STUDIES                                           
+AE   180  06  INDIVIDUAL STUDIES                                           
+AE   180  07  INDIVIDUAL STUDIES                                           
+AE   180  12  INDIVIDUAL STUDIES                                           
+AE   180  13  INDIVIDUAL STUDIES                                           
+AE   295A 01  PROJECT I                                                    
+AE   295A 02  PROJECT I                                                    
+AE   295B 01  PROJECT II                                                   
+AE   295B 02  PROJECT II                                                   
+AE   299  01  THESIS                                                       
+AE   299  02  THESIS                                                       
+AVIA 197  01  INTERN AIRLINE FO                                            
+CE   298  01  SPECIAL PROBLEMS                                             
+CE   298  02  SPECIAL PROBLEMS                                             
+CE   298  03  SPECIAL PROBLEMS                                             
+CE   298  04  SPECIAL PROBLEMS                                             
+CE   299  01  MASTERS THESIS                                               
+CHE  109  01  HEAT TRANS ELECTR                                            
+CHE  180  01  INDIVIDUAL STUDIES                                           
+CHE  180  02  INDIVIDUAL STUDIES                                           
+CHE  180  03  INDIVIDUAL STUDIES                                           
+CHE  298  01  SP PROB CHEM ENGR                                            
+CHE  298  02  SP PROB CHEM ENGR                                            
+CHE  298  03  SP PROB CHEM ENGR                                            
+CHE  298  04  SP PROB CHEM ENGR                                            
+CHE  298  05  SP PROB CHEM ENGR                                            
+CHE  299  01  MASTERS THESIS                                               
+CHE  299  02  MASTERS THESIS                                               
+CHE  299  03  MASTERS THESIS                                               
+CHE  299  04  MASTERS THESIS                                               
+CHE  299  05  MASTERS THESIS                                               
+CHE  299  06  MASTERS THESIS                                               
+CHE  299  07  MASTERS THESIS                                               
+CMPE 046  01  COMPE I                  ENG   401                           
+CMPE 046  02  LABORATORY               ENG   394                           
+CMPE 046  03  LABORATORY               ENG   393                           
+CMPE 124  01  DIGITAL DESIGN I         ENG   232                           
+CMPE 124  02  LABORATORY               ENG   390                           
+CMPE 124  03  LABORATORY               ENG   390                           
+CMPE 127  01  MICROPROC DESIGN 1       ENG   232                           
+CMPE 127  02  LABORATORY               ENG   232                           
+CMPE 127  03  LABORATORY               ENG   232                           
+CMPE 130  01  DATABASE SYSTEMS I       ENG   340                           
+CMPE 179  02  DIG DESIGN VHDL                                              
+CMPE 201  01  COMP MEMORY DESIGN       ENG   303                           
+CMPE 221  01  SOFTWARE ENGR            ENG   401                           
+EE   179  02  DIG DESIGN VHDL                                              
+EE   255  01  WIRELESS COMM                                                
+EE   255  02  WIRELESS COMM            ENG   345                           
+EE   298  01  SPEC PROB                                                    
+EE   298  02  SPEC PROB                                                    
+ENGR 010  01  INTRO TO ENGR            ENG   301                           
+ENGR 010  02  LABORATORY               ENG   391                           
+ENGR 010  03  LABORATORY               ENG   391                           
+ENGR 010  04  INTRO TO ENGR            ENG   303                           
+ENGR 010  05  LABORATORY               ENG   391                           
+ENGR 100W 01  ENGR REPORTS             ENG   395                           
+ENGR 100W 02  LABORATORY               ENG   392                           
+ENGR 100W 03  ENGR REPORTS             ENG   395                           
+ENGR 100W 04  LABORATORY               ENG   392                           
+ENGR 125  01  SOFTWARE ENGR I          ENG   303                           
+ENGR 130  01  ENGR PROB AND STAT       ENG   232                           
+ENGR 130  02  ENGR PROB AND STAT                                           
+ENGR 157  01  COMM CON & SERVICE                                           
+ENGR 202  01  SYSTEMS ENGR             ENG   303                           
+ENGR 202  02  LABORATORY               ENG   303                           
+ENGR 203  01  ENGR MANAGEMENT          IS    215                           
+ENGR 295A 01  PROJECT I                ENG   403                           
+ENGR 296H 01  XML FOR E-BUSINESS       BBC   223                           
+ENGR 296H 02  LABORATORY               ENG   489                           
+ENGR 297D 01  SPECIAL TOPICS-MFG                                           
+ENGR 297D 02  SPECIAL TOPICS-MFG                                           
+ISE  125  01  SOFTWARE ENGR I          ENG   303                           
+ISE  130  01  ENGR PROB AND STAT       ENG   232                           
+ISE  130  02  ENGR PROB AND STAT                                           
+ISE  180  01  INDIVID STUDIES                                              
+ISE  180  02  INDIVID STUDIES                                              
+ISE  212  01  HUM FACTORS EXP                                              
+ISE  241  01  ADV OPER PL+CONTRL       ENG   303                           
+ISE  298  01  SPEC PROB                                                    
+ISE  298  02  SPEC PROB                                                    
+MATE 175  01  BIOMAT & DEVICES         ENG   301                           
+MATE 180  01  IND STUDIES                                                  
+MATE 180  02  IND STUDIES                                                  
+MATE 180  03  IND STUDIES                                                  
+MATE 180  04  IND STUDIES                                                  
+MATE 260  01  THEORY SEMIC MATLS       ENG   301                           
+MATE 297  01  SPEC TOP MTLS ENG                                            
+MATE 297  02  SPEC TOP MTLS ENG                                            
+MATE 297  03  SPEC TOP MTLS ENG                                            
+MATE 298  01  MAT E PROJECT                                                
+MATE 298  02  MAT E PROJECT                                                
+MATE 298  03  MAT E PROJECT                                                
+MATE 298  04  MAT E PROJECT                                                
+MATE 298  05  MAT E PROJECT                                                
+MATE 298  06  MAT E PROJECT                                                
+MATE 298  07  MAT E PROJECT                                                
+MATE 298  08  MAT E PROJECT                                                
+MATE 298  09  MAT E PROJECT                                                
+MATE 299  01  MASTERS THESIS                                               
+MATE 299  02  MASTERS THESIS                                               
+MATE 299  03  MASTERS THESIS                                               
+MATE 299  04  MASTERS THESIS                                               
+MATE 299  05  MASTERS THESIS                                               
+MATE 299  06  MASTERS THESIS                                               
+MATE 299  07  MASTERS THESIS                                               
+MATE 299  08  MASTERS THESIS                                               
+MATE 299  09  MASTERS THESIS                                               
+MATE 299  10  MASTERS THESIS                                               
+MATE 299  11  MASTERS THESIS                                               
+MATE 299  12  MASTERS THESIS                                               
+MATE 299  13  MASTERS THESIS                                               
+MATE 299  14  MASTERS THESIS                                               
+MATE 299  15  MASTERS THESIS                                               
+MATE 299  16  MASTERS THESIS                                               
+ME   101  01  DYNAMICS                                                     
+ME   101  02  DYNAMICS                 ENG   401                           
+ME   109  01  HEAT TRANS ELECTR                                            
+ME   111  01  FLUID MECH                                                   
+ME   111  02  FLUID MECH               ENG   403                           
+ME   113  01  THERMODYNAMICS                                               
+ME   113  02  THERMODYNAMICS           ENG   401                           
+ME   114  01  THERMAL ENGR             ENG   340                           
+ME   114  02  LABORATORY                                                   
+ME   160  01  FINITE ELE METHODS                                           
+ME   160  02  FINITE ELE METHODS                                           
+ME   180  01  INDIV STUDIES                                                
+ME   180  02  INDIV STUDIES                                                
+ME   180  03  INDIV STUDIES                                                
+ME   180  04  INDIV STUDIES                                                
+ME   180  05  INDIV STUDIES                                                
+ME   180  06  INDIV STUDIES                                                
+ME   180  07  INDIV STUDIES                                                
+ME   298  01  SPECIAL PROJECT ME                                           
+ME   298  02  SPECIAL PROJECT ME                                           
+ME   299  01  MASTER'S THESIS                                              
+TECH 164  01  ELEC MANUFACTURING       IS    133                           
+TECH 183  01  PUB PRINTING TECH        ART   201                           
+TECH 198  01  TECHNOLOGY + CIVIL       IS    216                           
+TECH 198  02  TECHNOLOGY + CIVIL       IS    216                           
+TECH 198  03  TECHNOLOGY + CIVIL                                           
+TECH 198  04  TECHNOLOGY + CIVIL                                           
+TECH 198  05  TECHNOLOGY + CIVIL                                           
+TECH 198  06  TECHNOLOGY + CIVIL                                           
+TECH 198  07  TECHNOLOGY + CIVIL                                           

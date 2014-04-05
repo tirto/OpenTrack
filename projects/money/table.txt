@@ -1,0 +1,32 @@
+	Project: Add cost accounting features to Job Track
+
+* Each detail view of a request will have a table of charges associated
+  with that project. The table will be enumerated as follows:
+
+  charge id, order date, description, department, amount
+
+  Below that will be a total for all charges to that project.
+
+* Clicking on an entry on the table of charges allows you to edit that
+  entry or delete it.
+
+* There will be a button which allows you to add another entry.
+
+* There will be additional choices on the menu to the left to:
+  - Monthly charges
+
+* Each request in the summary view has a total charge for that project
+  listed.
+
+CREATE TABLE charges (
+       request_id    DATE,
+       charge_id     DATE,
+       order_date    DATE NOT NULL,
+       invoice       VARCHAR(32),
+       description   VARCHAR(64) NOT NULL,
+       vendor	     VARCHAR(32) NOT NULL,
+       amount	     NUMBER(8,2) NOT NULL,
+       department    NUMBER NOT NULL,
+       received	     BOOLEAN, -- item has been received
+       accounted     BOOLEAN, -- item has been expensed
+       PRIMARY KEY (request_id, charge_id));

@@ -1,0 +1,1 @@
+select count(*), trunc (logon) from events group by trunc(logon);

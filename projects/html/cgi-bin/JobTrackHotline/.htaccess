@@ -1,0 +1,7 @@
+AuthName JobTracking
+AuthType Basic
+AuthUserFile /home/httpd/.jthAccess
+
+<Limit GET POST>
+require valid-user
+</Limit>

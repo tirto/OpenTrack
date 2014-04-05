@@ -1,0 +1,280 @@
+ababse7075	051280	Ababseh	Charlie Nayif	nobody@email.sjsu.edu	2
+abuzma7710	082776	Abuzman	Gilbert S	nobody@email.sjsu.edu	2
+aderon1460	110280	Aderonpe	David Fiade	nobody@email.sjsu.edu	2
+aflato6410	042479	Aflatooni	Tony Pooya	nobody@email.sjsu.edu	2
+ahmed4274	120974	Ahmed	Naseem	nobody@email.sjsu.edu	2
+alfero4326	122579	Alferos	Ronnie Roa	nobody@email.sjsu.edu	2
+alhamb1720	062179	Alhambra	Augustus P	nobody@email.sjsu.edu	2
+amin6147	081477	Amin	Ozair	nobody@email.sjsu.edu	2
+angel0085	052080	Angel	Rodrigo Duane	nobody@email.sjsu.edu	2
+angel1584	040981	Angel	Abraham	nobody@email.sjsu.edu	2
+anzald6481	061881	Anzaldo	John L	nobody@email.sjsu.edu	2
+au1390	031672	Au	Andrew Ka-Fung	nobody@email.sjsu.edu	2
+augsbu4163	051279	Augsburger	Scott W	nobody@email.sjsu.edu	2
+bae2205	010279	Bae	Jae Oh	nobody@email.sjsu.edu	2
+baile1230	121179	Baile	Andrew C.	nobody@email.sjsu.edu	2
+baker4133	021980	Baker	Kyle A	nobody@email.sjsu.edu	2
+balder1717	062580	Balderama	Earvin Saint	nobody@email.sjsu.edu	2
+balles4461	020580	Ballesteros	Michael N	nobody@email.sjsu.edu	2
+bartle2881	080570	Bartlett	Charles James	nobody@email.sjsu.edu	2
+bell5650	102176	Bell	James E	nobody@email.sjsu.edu	2
+boldt0050	051877	Boldt	Marco S	nobody@email.sjsu.edu	2
+bowden7598	010379	Bowden	Roy Edward	nobody@email.sjsu.edu	2
+brown4124	080780	Brown	Ryan E	nobody@email.sjsu.edu	2
+brown8210	033060	Brown	Caridad Alberta	nobody@email.sjsu.edu	1
+bucaoj6777	061581	Bucaojit	Laura S.	nobody@email.sjsu.edu	1
+bui7946	011081	Bui	Tuan Anh	nobody@email.sjsu.edu	2
+calaoa9028	010480	Calaoagan	Alex H.	nobody@email.sjsu.edu	2
+cao1580	011062	Cao	Hoang Thanh	nobody@email.sjsu.edu	2
+carlto6096	111477	Carlton	Ryan Douglas	nobody@email.sjsu.edu	2
+carras3947	071173	Carrasco Ii	Epifanio Alvarado	nobody@email.sjsu.edu	2
+caylao0017	012778	Caylao	Patrick V	nobody@email.sjsu.edu	2
+chan2742	110680	Chan	Henry M	nobody@email.sjsu.edu	2
+chan3224	031779	Chan	Seth Hang	nobody@email.sjsu.edu	2
+chan6344	052781	Chan	May K.	nobody@email.sjsu.edu	1
+chan9273	011781	Chan	Harold Luis	nobody@email.sjsu.edu	2
+chan9623	042278	Chan	Keith	nobody@email.sjsu.edu	2
+chen8118	090972	Chen	Erik Jianxin	nobody@email.sjsu.edu	2
+chen8667	020179	Chen	Yan Ji	nobody@email.sjsu.edu	2
+chen8776	060480	Chen	Kai Wai	nobody@email.sjsu.edu	2
+cheney8987	120276	Cheney	Brandon Rick	nobody@email.sjsu.edu	2
+cheung3098	030781	Cheung	Benny Chiho	nobody@email.sjsu.edu	2
+chien3805	052376	Chien	Robert Shoushih	nobody@email.sjsu.edu	2
+chin2733	090680	Chin	Alex John	nobody@email.sjsu.edu	2
+chio0540	052774	Chio	Arturo Bungalon; Jr.	nobody@email.sjsu.edu	2
+choo3948	022880	Choo	Paul	nobody@email.sjsu.edu	2
+collin3796	011580	Collins	Jared Everett	nobody@email.sjsu.edu	2
+conci7376	070563	Conci	Dennis Emilio	nobody@email.sjsu.edu	2
+corona4707	052177	Corona	David	nobody@email.sjsu.edu	2
+dalida1430	052079	Dalida	Matthew Justin	nobody@email.sjsu.edu	2
+david6058	100579	David	Catherine J	nobody@email.sjsu.edu	1
+davids0318	020964	Davidson	Rod	nobody@email.sjsu.edu	2
+deang8398	092280	Deang	Rubyanne	nobody@email.sjsu.edu	1
+deldar4993	092680	Deldar	Mania	nobody@email.sjsu.edu	1
+deocam3163	030279	Deocampo	Iliad Jon	nobody@email.sjsu.edu	2
+desant6316	082176	Desantiago	Robert	nobody@email.sjsu.edu	2
+dhinds6876	042078	Dhindsa	Parwinder Singh	nobody@email.sjsu.edu	2
+diaz2175	072166	Diaz	Jesus G.	nobody@email.sjsu.edu	2
+dimala7059	102781	Dimalanta	Anthony E	nobody@email.sjsu.edu	2
+ditlow4299	090380	Ditlow	Lena C.	nobody@email.sjsu.edu	1
+doan1168	051679	Doan	Joseph Huan	nobody@email.sjsu.edu	2
+doan2131	010166	Doan	Tuyen Nhut	nobody@email.sjsu.edu	2
+doan5713	010675	Doan	Khanh Van	nobody@email.sjsu.edu	2
+dubois3061	090680	Dubois	Benjamin Josselin	nobody@email.sjsu.edu	2
+duong9873	032081	Duong	Han	nobody@email.sjsu.edu	1
+elias1535	063077	Elias	Geoffe Joseph	nobody@email.sjsu.edu	2
+elliot8487	011070	Elliott	Michael Laurence	nobody@email.sjsu.edu	2
+encarn2351	113078	Encarnacion	Jesse A	nobody@email.sjsu.edu	2
+estaci0716	110777	Estacion	Alexander V.	nobody@email.sjsu.edu	2
+federi1392	010866	Federico	Kevin James	nobody@email.sjsu.edu	2
+fernan2787	062679	Fernando	Kristoffer Ian	nobody@email.sjsu.edu	2
+flissi8644	062477	Flissinger	James R	nobody@email.sjsu.edu	2
+fong0699	081580	Fong	Ryan Lee	nobody@email.sjsu.edu	2
+fong3539	061578	Fong	David	nobody@email.sjsu.edu	2
+gangad4975	022178	Gangadhara	Sunil Hosalli	nobody@email.sjsu.edu	2
+garcia2203	122879	Garcia	Gloisa-Faye Bagube	nobody@email.sjsu.edu	1
+garcia7082	072080	Garcia	Carlos A	nobody@email.sjsu.edu	2
+gebrem6754	060175	Gebremariam	Hiruy Tefera	nobody@email.sjsu.edu	2
+ghasse2905	042080	Ghassemi	Reza John	nobody@email.sjsu.edu	2
+gil8538	052177	Gil	David	nobody@email.sjsu.edu	2
+gill3858	041180	Gill	Sharandeep	nobody@email.sjsu.edu	1
+grant7965	042380	Grant	Marcella J	nobody@email.sjsu.edu	1
+gunabe5026	090679	Gunabe	Jeffrey N	nobody@email.sjsu.edu	2
+halim9151	070378	Halim	Maxwell Hugo	nobody@email.sjsu.edu	2
+hansra6638	012480	Hansra	Gursharan Singh	nobody@email.sjsu.edu	2
+hardin8315	051576	Harding	Adam Wayne	nobody@email.sjsu.edu	2
+hayes5204	110478	Hayes	Adam Mitchell	nobody@email.sjsu.edu	2
+he5955	030179	He	Hanson H	nobody@email.sjsu.edu	2
+hidaya8486	122180	Hidayat	Melvin Scott	nobody@email.sjsu.edu	2
+hives3834	081477	Hives	Albert Lee	nobody@email.sjsu.edu	2
+hnin7957	072276	Hnin	Moe Moe	nobody@email.sjsu.edu	1
+ho2651	110980	Ho	Hiep Cong	nobody@email.sjsu.edu	2
+ho2856	032981	Ho	Huy Nguyen	nobody@email.sjsu.edu	2
+ho3573	011078	Ho	Son Trung	nobody@email.sjsu.edu	2
+hoang6919	050881	Hoang	Hai T	nobody@email.sjsu.edu	2
+hoang8858	041670	Hoang	Nguyen V	nobody@email.sjsu.edu	2
+horne6367	032981	Horne	Stafford Mitchell	nobody@email.sjsu.edu	2
+hozumi9582	032178	Hozumi	Satoru	nobody@email.sjsu.edu	2
+hsieh4091	070777	Hsieh	James Chihong	nobody@email.sjsu.edu	2
+hsu6126	012679	Hsu	Alan W	nobody@email.sjsu.edu	2
+htay4200	050877	Htay	Linda M	nobody@email.sjsu.edu	1
+hu8484	111173	Hu	Jason	nobody@email.sjsu.edu	1
+huang0801	111678	Huang	Brian Xing	nobody@email.sjsu.edu	2
+huang7461	072079	Huang	Calvin J	nobody@email.sjsu.edu	2
+hung7361	062979	Hung	Joshua Mukmen	nobody@email.sjsu.edu	2
+huynh0155	032579	Huynh	Vince Chi	nobody@email.sjsu.edu	2
+huynh6195	010977	Huynh	Thao Giang	nobody@email.sjsu.edu	2
+inthav5245	021679	Inthavong	Mek Frank	nobody@email.sjsu.edu	2
+ip5894	081481	Ip	Ricky Chi Pan	nobody@email.sjsu.edu	2
+irving1256	021163	Irving	Mark S.	nobody@email.sjsu.edu	2
+jafari0536	031580	Jafari	Lili	nobody@email.sjsu.edu	1
+jimene8086	011977	Jimenez	Mario	nobody@email.sjsu.edu	2
+johnso7206	061075	Johnson	Mark	nobody@email.sjsu.edu	2
+jones8433	101879	Jones	Michael Helson	nobody@email.sjsu.edu	2
+jones8920	062271	Jones	Lance Marcus	nobody@email.sjsu.edu	2
+kaur4030	111975	Kaur	Geetpal	nobody@email.sjsu.edu	1
+kea0388	041180	Kea	Jean	nobody@email.sjsu.edu	2
+khagha3184	032781	Khaghani	Peymon	nobody@email.sjsu.edu	2
+khairi7033	041374	Khairi	Tarig M.	nobody@email.sjsu.edu	2
+kim1317	111665	Kim	Dong-Hoon	nobody@email.sjsu.edu	2
+koh1363	042979	Koh	Keng Wye	nobody@email.sjsu.edu	2
+korbes9276	101777	Korbes	George T	nobody@email.sjsu.edu	2
+kou7300	122275	Kou	Dawei	nobody@email.sjsu.edu	2
+lai4427	121477	Lai	Eddie Hau Chung	nobody@email.sjsu.edu	2
+lai7408	031380	Lai	Martina K.	nobody@email.sjsu.edu	1
+lam5012	112878	Lam	Thanh Tuan	nobody@email.sjsu.edu	2
+lam5949	050181	Lam	Kevin	nobody@email.sjsu.edu	2
+lamphi9447	112667	Lamphier	Susan M	nobody@email.sjsu.edu	1
+lansan7990	111780	Lansang	Christine Anne	nobody@email.sjsu.edu	1
+lau0928	050679	Lau	Johnny Lap-Kwong	nobody@email.sjsu.edu	2
+lau9069	083177	Lau	Shing Hong	nobody@email.sjsu.edu	2
+lavari8634	091780	Lavarias	Romeo S	nobody@email.sjsu.edu	2
+le1976	021575	Le	Tuan V	nobody@email.sjsu.edu	2
+le3950	082281	Le	Jonathan Q	nobody@email.sjsu.edu	2
+le5425	062368	Le	Tuan Dinh	nobody@email.sjsu.edu	2
+le6529	072377	Le	Tran Hung	nobody@email.sjsu.edu	2
+le9860	061861	Le	Dieu-Nhi T	nobody@email.sjsu.edu	1
+le9887	091575	Le	Janet Hanh-My	nobody@email.sjsu.edu	1
+lee0710	041580	Lee	Celina	nobody@email.sjsu.edu	1
+lee7669	041580	Lee	Carmen	nobody@email.sjsu.edu	1
+lee8923	110878	Lee	Peter C.W.	nobody@email.sjsu.edu	2
+lens6069	052279	Lens	Solman	nobody@email.sjsu.edu	2
+leung2814	112973	Leung	Philip W	nobody@email.sjsu.edu	2
+leung4731	083079	Leung	Kenneth	nobody@email.sjsu.edu	2
+li1883	041679	Li	Andrew Xiaoxi	nobody@email.sjsu.edu	2
+li2763	062579	Li	Teddy Chiu-Lung	nobody@email.sjsu.edu	2
+li9061	090376	Li	Weiming	nobody@email.sjsu.edu	2
+liaw7469	102573	Liaw	Flora	nobody@email.sjsu.edu	1
+lin8099	081075	Lin	Yen-Chen	nobody@email.sjsu.edu	2
+liu7676	082476	Liu	Kevin	nobody@email.sjsu.edu	2
+lo4559	062279	Lo	Brian	nobody@email.sjsu.edu	2
+loaisi6045	080171	Loaisiga	Manuel Alfonso	nobody@email.sjsu.edu	2
+long8731	010266	Long	Catherine	nobody@email.sjsu.edu	1
+lopez3191	111076	Lopez	Yancy Roberto	nobody@email.sjsu.edu	2
+lozano3835	012559	Lozano-Ross	Mark	nobody@email.sjsu.edu	2
+lu3259	071279	Lu	Huy C.	nobody@email.sjsu.edu	2
+lu3612	022181	Lu	Abraham Qixing	nobody@email.sjsu.edu	2
+ly8602	031681	Ly	Khoa	nobody@email.sjsu.edu	2
+ly8604	031681	Ly	Dang	nobody@email.sjsu.edu	2
+ma1055	120978	Ma	Yin K	nobody@email.sjsu.edu	2
+ma6165	070978	Ma	Huy Q	nobody@email.sjsu.edu	2
+ma9214	100777	Ma	Chi Fung	nobody@email.sjsu.edu	2
+machad4593	032977	Machado	Stephen John	nobody@email.sjsu.edu	2
+magdae9711	051181	Magdael	Daniel Francis	nobody@email.sjsu.edu	2
+mahal0278	032879	Mahal	Davinder Singh	nobody@email.sjsu.edu	2
+mahdi8547	120378	Mahdi	Kasib T	nobody@email.sjsu.edu	2
+mallar6240	100680	Mallare	Anthony Peter	nobody@email.sjsu.edu	2
+marc2624	102680	Marc	Paul Joseph	nobody@email.sjsu.edu	2
+martin1196	092474	Martin	Jeremiah Leandre	nobody@email.sjsu.edu	2
+mcgreg1192	032779	Mcgregor	Michael Arvid	nobody@email.sjsu.edu	2
+mendoz1310	050778	Mendoza	Jose Isaac	nobody@email.sjsu.edu	2
+mendoz5328	090379	Mendoza	Adrian Sy	nobody@email.sjsu.edu	2
+miles5560	101180	Miles	Brandon Robert	nobody@email.sjsu.edu	2
+mo8348	011981	Mo	Andy	nobody@email.sjsu.edu	2
+mohtad5949	112675	Mohtadi	Kian	nobody@email.sjsu.edu	2
+mondal1187	021381	Mondala	Jaime L	nobody@email.sjsu.edu	2
+monge6630	081780	Monge	Nick J	nobody@email.sjsu.edu	2
+moore6606	051581	Moore	Jason Paul	nobody@email.sjsu.edu	2
+murphy8637	022777	Murphy	Timothy Michael	nobody@email.sjsu.edu	2
+myers3364	022274	Myers	Michelle A	nobody@email.sjsu.edu	1
+nahar0265	121879	Nahar	Shamsun	nobody@email.sjsu.edu	1
+naji7882	011669	Naji	Karim	nobody@email.sjsu.edu	2
+neti6704	051781	Neti	Srivishnu V.	nobody@email.sjsu.edu	2
+nguyen1998	072178	Nguyen	Dong Tran	nobody@email.sjsu.edu	2
+nguyen3429	091381	Nguyen	Kha B	nobody@email.sjsu.edu	2
+nguyen6334	022480	Nguyen	Ben	nobody@email.sjsu.edu	2
+nguyen6528	030280	Nguyen	Ty	nobody@email.sjsu.edu	2
+nguyen6690	032777	Nguyen	Vu D	nobody@email.sjsu.edu	2
+nguyen8198	021681	Nguyen	Loan Anh T.	nobody@email.sjsu.edu	1
+nguyen8670	012080	Nguyen	Chanh Trung	nobody@email.sjsu.edu	2
+nguyen9271	052381	Nguyen	David	nobody@email.sjsu.edu	2
+nolen5935	051381	Nolen	Sean Michael	nobody@email.sjsu.edu	2
+ouyan2807	042870	Ou-Yang	I.	nobody@email.sjsu.edu	2
+parent3529	011674	Parent	Kevin Reed	nobody@email.sjsu.edu	2
+parmar3765	073180	Parmar	Sham	nobody@email.sjsu.edu	2
+pascua1504	041280	Pascual	Kristin Anne	nobody@email.sjsu.edu	1
+patel4245	090777	Patel	Ketan C.	nobody@email.sjsu.edu	2
+payne2961	011778	Payne	David	nobody@email.sjsu.edu	2
+pech5008	112379	Pech	Steven	nobody@email.sjsu.edu	2
+pham7052	090681	Pham	Tam D	nobody@email.sjsu.edu	2
+phan3644	110871	Phan	Nguyen Ky	nobody@email.sjsu.edu	2
+pichan2545	112680	Pichanusakorn	Dreevit	nobody@email.sjsu.edu	2
+platz7817	032873	Platz	Mark Alexander	nobody@email.sjsu.edu	2
+pourta9183	040177	Pourtahmasbi	Hermin	nobody@email.sjsu.edu	1
+qutob9127	040680	Qutob	Hatim I	nobody@email.sjsu.edu	2
+raimun2705	052780	Raimundo	Liza Ann	nobody@email.sjsu.edu	1
+ramire9354	090772	Ramirez	Erik Yomelfi	nobody@email.sjsu.edu	2
+reeves9785	072481	Reeves	Rodney Neils	nobody@email.sjsu.edu	2
+refai8701	040580	Refai	Imran Shafi	nobody@email.sjsu.edu	2
+reimer6739	020562	Reimert	Scott Philip	nobody@email.sjsu.edu	2
+rodrig6426	092468	Rodrigues	Anthony George	nobody@email.sjsu.edu	2
+rosari5897	012964	Rosario-Figueroa	Ervin	nobody@email.sjsu.edu	2
+roy6001	042781	Roy	Meeta	nobody@email.sjsu.edu	1
+rubian6410	021180	Rubiano	Brian D	nobody@email.sjsu.edu	2
+sablan5049	040576	Sablan	Danielle Elizabeth	nobody@email.sjsu.edu	1
+sales3058	032981	Sales	Bruce William	nobody@email.sjsu.edu	2
+sam6739	010780	Sam	Thanh N.	nobody@email.sjsu.edu	1
+sandov8364	052966	Sandoval	Guillermo	nobody@email.sjsu.edu	2
+santos8568	062879	Santos	Adrian R	nobody@email.sjsu.edu	2
+serrat3456	082274	Serrato	Audelio	nobody@email.sjsu.edu	2
+sha8318	011579	Sha	Jin W	nobody@email.sjsu.edu	2
+sharma9598	032579	Sharma	Kevin G	nobody@email.sjsu.edu	2
+sheikm4200	072777	Sheikman	Boris L	nobody@email.sjsu.edu	2
+shen4567	120779	Shen	Robert P	nobody@email.sjsu.edu	2
+shih8180	122379	Shih	Victor C.	nobody@email.sjsu.edu	2
+silic7883	121576	Silic	Bojan	nobody@email.sjsu.edu	2
+silva3222	031170	Silva	Mark P	nobody@email.sjsu.edu	2
+singh9915	121377	Singh	Gurveer	nobody@email.sjsu.edu	2
+stylia0043	070277	Stylianou	Marios Theodoros	nobody@email.sjsu.edu	2
+sum7975	082380	Sum	Hamilton	nobody@email.sjsu.edu	2
+sun4419	111178	Sun	David C	nobody@email.sjsu.edu	2
+tadgo6927	012774	Tadgo	Manyaheleshal Debebe	nobody@email.sjsu.edu	1
+tadlip2332	062078	Tadlip	Michael Cawile	nobody@email.sjsu.edu	2
+tagamo3396	081479	Tagamolila	Fredric Ledesma	nobody@email.sjsu.edu	2
+tai4170	081181	Tai	Kuo-Fu	nobody@email.sjsu.edu	2
+tan3985	072281	Tan	Nelson	nobody@email.sjsu.edu	2
+tang9631	020979	Tang	Vinh The	nobody@email.sjsu.edu	2
+tatad8388	100280	Tatad	Serafin Surban; Jr.	nobody@email.sjsu.edu	2
+thach9699	120380	Thach	Jackson	nobody@email.sjsu.edu	2
+tham8597	091681	Tham	Arthur Ronnie	nobody@email.sjsu.edu	2
+thao1943	013081	Thao	Seng	nobody@email.sjsu.edu	1
+tien8963	080179	Tien	Vinh T	nobody@email.sjsu.edu	2
+tieu2936	031980	Tieu	Khanh	nobody@email.sjsu.edu	2
+toguch0541	010379	Toguchi	Mark Manabu	nobody@email.sjsu.edu	2
+torres9431	042959	Torres	Alfredo Hernandez	nobody@email.sjsu.edu	2
+tran0564	101878	Tran	Nguyen Khai	nobody@email.sjsu.edu	2
+tran2275	102780	Tran	Ngoc Kim	nobody@email.sjsu.edu	2
+tran2546	011276	Tran	Yen K	nobody@email.sjsu.edu	1
+tran4350	060879	Tran	Phuc Xaun	nobody@email.sjsu.edu	2
+tran6162	010680	Tran	Kai S	nobody@email.sjsu.edu	2
+tran6487	010676	Tran	Son Hoai	nobody@email.sjsu.edu	2
+tu7408	090274	Tu	Jimmy	nobody@email.sjsu.edu	2
+vallej4482	042681	Vallejo	David Francisco	nobody@email.sjsu.edu	2
+versal0485	012879	Versal	Benjamin	nobody@email.sjsu.edu	2
+villa2248	120978	Villa-Carlos	Trina Anne	nobody@email.sjsu.edu	1
+vo4006	090977	Vo	Kiem	nobody@email.sjsu.edu	2
+vuong7350	081681	Vuong	Rita	nobody@email.sjsu.edu	1
+wang4302	101180	Wang	Edward T	nobody@email.sjsu.edu	2
+waxler6379	111676	Waxler	John C.	nobody@email.sjsu.edu	2
+weaver2248	070680	Weaver	Dustan Lee	nobody@email.sjsu.edu	2
+weil0962	090969	Weil	Paul Frederick	nobody@email.sjsu.edu	2
+willia8566	081181	Williams	Daniel D	nobody@email.sjsu.edu	2
+wong2907	122973	Wong	Angela D	nobody@email.sjsu.edu	1
+wong3571	051581	Wong	Steve David	nobody@email.sjsu.edu	2
+wong4357	012181	Wong	Terrence T	nobody@email.sjsu.edu	2
+wong6648	082078	Wong	Benson J	nobody@email.sjsu.edu	2
+wong9875	061480	Wong	Brandon M	nobody@email.sjsu.edu	2
+wood2907	012379	Wood	Michael Douglas	nobody@email.sjsu.edu	2
+wu5565	112880	Wu	En-Li	nobody@email.sjsu.edu	2
+xa1804	060377	Xa	Dung Hoc	nobody@email.sjsu.edu	2
+yang8381	032174	Yang	Henry H.	nobody@email.sjsu.edu	2
+yeung1710	022078	Yeung	Fanny Mei-Ling	nobody@email.sjsu.edu	1
+yip1977	111980	Yip	Andrew	nobody@email.sjsu.edu	2
+young7894	030278	Young	Harrison	nobody@email.sjsu.edu	2
+yu3935	022380	Yu	Richmond Arthur	nobody@email.sjsu.edu	2
+yu5085	112879	Yu	Philip Ka Yip	nobody@email.sjsu.edu	2
+yu5769	040379	Yu	Jonathan Sun-Ho	nobody@email.sjsu.edu	2
+yu9568	081980	Yu	Shawn	nobody@email.sjsu.edu	2
+zavala9332	021276	Zavala-Diaz	Gabriel	nobody@email.sjsu.edu	2
+zhang3275	110279	Zhang	Yuan Guang	nobody@email.sjsu.edu	2
+zhang4584	071080	Zhang	Fan	nobody@email.sjsu.edu	2

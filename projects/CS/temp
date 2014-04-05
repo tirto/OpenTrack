@@ -1,0 +1,25 @@
+                   $stmt1 = OCIParse($conn,"SELECT cs_term, cs_course
+                                    FROM cs_courses 
+				         WHERE cs_sid = $sid
+                                             ORDER BY cs_term");
+
+                   OCIExecute($stmt1);
+                   $nrows1 = OCIFetchStatement($stmt1,$results1);
+                   if ($nrows1 > 0) {
+                      for ($j = 0; $j < $nrows1; $j++) {
+                         reset($results1);
+                         while ( $column1 = each($results1)) {
+                            $data1 = $column1['value'];
+                            $colname1 = $column1['key'];
+                            if ($colname1 == 'CS_TERM') {
+                                $term = $data1[$j];
+		                $sem = convertSem(substr($term,-1));
+		                $year = substr($term,0,2);
+       		                print "<TD>$sem $year</TD>\n";
+                            }
+                            else {
+                                print "<TD>$data1[$j]</TD></TR><TR><TD></TD><TD></TD>";
+                            }
+                         } 
+                      }
+                   }

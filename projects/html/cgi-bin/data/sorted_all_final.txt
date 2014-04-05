@@ -1,0 +1,151 @@
+Adams,Linda,3801,ENG,493,ladams@email.sjsu.edu,1,Development Assistant
+Agarwal,Raghu,3845,ENG,310D,ragarwal@email.sjsu.edu,20,Faculty
+Al-manaseer,Akthem,3860,ENG,167,akthem@email.sjsu.edu,17,Acting Chair
+Allen,Emily,4010,ENG,385B,elallen@email.sjsu.edu,16,Faculty
+Anagnos,Thalia,3861,ENG,143,tanagnos@email.sjsu.edu,17,Chair
+Arnold,Steve,3833,ENG,132,n/a,17,Faculty
+Astrin,Arthur,3188,ENG,283K,n/a,18,Faculty	
+Backer,Pat,3214,IS,104,pabacker@email.sjsu.edu,21,Faculty
+Barez,Fred,4298,ENG,310H,barezf@email.sjsu.edu,20,Chair
+Barrett,Bill,4127,ENG,485A,wbarrett@email.sjsu.edu,18,Faculty	
+Bates,Seth,3227,IS,111,bates@email.sjsu.edu,21,Faculty
+Beck,Jim,3598,ENG,491,jbeck@sjsu.edu,3,Director
+Blythe,Bill,3862,ENG,169,wrbsr@ao1.com,17,Faculty
+Boag,Tom,3879,ENG,485E,tboag@email.sjsu.edu,13,Director
+Botha,Jan,3953,ENG,161,jbotha@email.sjsu.edu,17,Faculty
+Brindos,Ray,3820,ENG,186A,rbrindos@email.sjsu.edu,4,Technician
+Brunston,Sharolene,3840,ENG,310,brunston@voyager.engr.sjsu.edu,20,Secretary
+Burton,Ester,3900,ENG,145,eburton@email.sjsu.edu,17,Secretary	
+Caohuu,Tri,3951,ENG,375,n/a,19,Faculty
+Cardoza,John,3897,ENG,325A,jcardoza@email.sjsu.edu,18,Technician 
+Carlson,Kurt,4095,ENG,493,carlsonk@email.sjsu.edu,1,Director Development
+Chai,Hi Dong,3875,ENG,369,hdchai@email.sjsu.edu,19,Faculty
+Chang,Lee,3891,ENG,275,leechang@email.sjsu.edu,18,Faculty
+Chen,Ray,3869,ENG,361,rachen@email.sjsu.edu,19,Faculty
+Chiao,Sun,3910,ENG,363,sschiao@email.sjsu.edu,19,Faculty
+Choo,Chang,3980,ENG,253,cychoo@email.sjsu.edu,19,Faculty
+Chung,Richard,3195,IS,107,wrchung@email.sjsu.edu,21,Faculty
+Cohn,Laura,4155,ENG,292,lcohn@email.sjsu.edu,14,Projects
+Corker,Kevin,3988,ENG,381,kcorker@mail.arc.nasa.gov,18,Faculty	
+Davis,Art,3981,ENG,265,adavis@email.sjsu.edu,19,Faculty
+Desautel,Dick,3841,ENG,310B,ddd@voyager.engr.sjsu.edu,20,Faculty
+Dessouky,Yasser,4133,ENG,283G,ydessouk@email.sjsu.edu,18,Faculty
+Duda,Richard,3917,ENG,359,rod@duda.org,19,Faculty
+Estrella,Virginia,3830,ENG,366,estrevi@email.sjsu.edu,12,Director
+Farris,Anita,6581,AB,105,afarris@email.sjsu.edu,15,Secretary
+Fatoohi,Rod,4059,ENG,273,rfatoohi@email.sjsu.edu,18,Faculty
+Fonseca,Elaine,3900,ENG,145,n/a,17,Secretary
+Fox,Stephanie,4071,ENG,485J,sjfox@email.sjsu.edu,11,System Administrator
+Frank-Dunton,Donna,3978,ENG,493,dfdunton@email.sjsu.edu,1,Secretary
+Freeman,James,3794,ENG,373,jfreeman@email.sjsu.edu,19,Faculty
+Freund,Louis,3890,ENG,283H,lfreund@email.sjsu.edu,18,Faculty
+Freund,Louis,4151,ENG,284A,lfreund@email.sjsu.edu,18,Acting Chair
+Frick,Juanita,3979,ENG,239,jfrick@email.sjsu.edu,5,System Analyst
+Furman,Buff,3817,ENG,310G,bjfurman@email.sjsu.edu,20,Faculty
+Galvan,Cookie,3192,IS,111,cgalvan@email.sjsu.edu,21,Secretary
+Gao,Jerry,3904,ENG,267B,jerrygao@email.sjsu.edu,18,Faculty
+Garcia,Julio,3222,IS,101,jgarcia@email.sjsu.edu,21,Faculty
+Gleixner,Stacey,4051,ENG,385F,n/a,16,Faculty
+Gwozdz,Peter,3931,ENG,485D,pgwozdz@email.sjsu.edu,8,Director
+Hambaba,Ahmed,3959,ENG,269,hambaba@email.sjsu.edu,18,Faculty
+Harkey,Dan,4038,ENG,283,n/a,3,Advisor
+Harkey,Dan,4038,ENG,283,n/a,18,Faculty
+He,Lili,4073,ENG,357,n/a,19,Faculty
+Hemer,Dave,3793,ENG,106,dhemer@email.sjsu.edu,17,Technician
+Hernandez,Steve,3822,ENG,233,hernans@email.sjsu.edu,16,Technician
+Holmes,David,3226,IS,106,dcholmes@email.sjsu.edu,21,Chair
+Horz-Reynard,Birgit,4056,ENG,385A,n/a,16,Secretary
+Hsu,Ping,3838,ENG,257,phsu@email.sjsu.edu,19,Faculty
+Hsu,Tai-Ran,3905,ENG,187,tairan@email.sjsu.edu,20,Faculty
+Hu,Albert,n/a,n/a,n/a,alhu@email.sjsu.edu,19,Faculty
+Huang,John,3916,ENG,253,n/a,19,Faculty
+Huang,Samuel,6596,AB,104,huangss@email.sjsu.edu,15,Faculty	
+Hung,Donald,4087,ENG,485B,n/a,18,Faculty	
+Israel,Kindness,4134,ENG,239,kindness@email.sjsu.edu,5,Director
+Jennings,Mike,3926,ENG,385H,jennimi@email.sjsu.edu,16,Chair
+Kim,Mohan,3219,IS,107,mohankim@email.sjsu.edu,21,Faculty
+Kim,Yudong,4073,ENG,357,yudongk@email.sjsu.edu,19,Faculty
+Kirk,Don,3800,ENG,493,dkirk@email.sjsu.edu,1,Dean
+Knapp,Ben,3860,n/a,n/a,rbknapp@email.sjsu.edu,18,Faculty
+Koch,Malcolm,3826,ENG,106,mkoch@email.sjsu.edu,17,Technician
+Komives,Claire,4002,ENG,385J,n/a,16,Faculty
+Kurzweil,Jack,3913,ENG,251,kurzweil@email.sjsu.edu,19,Faculty
+La duca,Chuck,3213,IS,130,claduca@email.sjsu.edu,21,Technician
+Lambert,Michael,3866,ENG,310C,lambertm@email.sjsu.edu,20,Faculty
+Lewis,Veronica,3977,ENG,349,vflewis@email.sjsu.edu,19,Secretary
+Li,Harry,4060,ENG,267A,huali@email.sjsu.edu,18,Faculty	
+Linsdell,Jeanne,3871,ENG,485G,jlinsdell@email.sjsu.edu,18,Faculty	
+Luna,Carlos,4022,ENG,485H,carlos@manex.org,10,Acting Manager		
+Luu,Nhan,6591,AB,124,nvluu@email.sjsu.edu,21,Technician
+Marouf,Essam,3969,ENG,353,emarouf@email.sjsu.edu,19,Faculty
+Martin,Alan,3815,ENG,186A,almartin@email.sjsu.edu,4,Technician
+Martinez,Debbie,n/a,n/a,n/a,dmartine@email.sjsu.edu,1,Secretary
+Maxwell,Robert,3212,IS,130,n/a,21,Technician
+McMullin,Kurt,3855,ENG,171,mcmullin@email.sjsu.edu,17,Faculty
+McNeil,Melanie,3873,ENG,385J,mcneil@sjsuvm1.sjsu.edu,16,Faculty
+McQueen,Bob,3888,ENG,283D,rmcqueen@sjsuvm1.sjsu.edu,14,Director
+McQueen,Bob,3888,ENG,283D,rmcqueen@sjsuvm1.sjsu.edu,18,Faculty
+Melkonian,Lina,6016,ENG,485K,linas@email.sjsu.edu,7,Director
+Mohr,Bill,3893,ENG,237,wgmohr@coe.engr.sjsu.edu,5,Network Analyst
+Moriarty,Gene,3882,ENG,261,gmoriart@email.sjsu.edu,19,Faculty
+Mostafavi,Masoud,3970,ENG,367,mmostafa@email.sjsu.edu,19,Faculty
+Mourtos,Nikos,3867,ENG,183,abebe@voyager.engr.sjsu.edu,19,Faculty
+Moustakas,Evan,3868,ENG,371,moustaka@email.sjsu.edu,19,Faculty
+Muller,Carol,4070,ENG,485I,cbmuller@email.sjsu.edu,11,Director
+Ndon,Udeme,3863,ENG,149,ujndon@email.sjsu.edu,17,Faculty
+Neel,David,6582,AB,105B,dneel@email.sjsu.edu,15,Chair
+O'Flynn,Michael,4295,ENG,255,n/a,19,Faculty
+Obi,Samuel,3218,IS,105,sobi@email.sjsu.edu,21,Faculty
+Orr,Lois,4151,ENG,284,lorr@email.sjsu.edu,18,Secretary	
+Ozemek,Haluk,3877,ENG,271,hozemek@email.sjsu.edu,18,Faculty
+Panter,Carl,6590,AB,124,cpanter@yahoo.com,15,Technician
+Parent, David,3963,ENG,355,n/a,19,Faculty
+Patankar,Manoj,6595,AB,103,mpatanka@aol.com,15,Faculty	
+Pernicka,Becky,3985,ENG,239A,becky@voyager.engr.susu.edu,5,Systems Analyst
+Pernicka,Hank,4054,ENG,310F,hank@voyager.engr.sjsu.edu,20,Faculty
+Pham,Scott,4020,ENG,239A,shpham@email.sjsu.edu,5,Webmaster
+Phillips,Scharlee,4150,ENG,284,n/a,18,Secretary
+Pizzo,Pat,3923,ENG,385E,ppizzo@email.sjsu.edu,16,Faculty
+Pour,Gilda,4145,ENG,279,gpour@email.sjsu.edu,18,Faculty
+Pulido,Mary,3938,ENG,346,mpulido@email.sjsu.edu,19,Technician
+Rao,Rangaiya,3914,ENG,357,rrao@email.sjsu.edu,19,Faculty
+Reich,Marilyn,4047,ENG,130A,mreich@email.sjsu.edu,4,Clerk
+Reischl,Peter,3911,ENG,263,preischl@email.sjsu.edu,19,Faculty
+Robinson,Kathy,4048,ENG,493,krobinson@email.sjsu.edu,1,Senior Secretary
+Robinson,Mike,3894,ENG,283I,robinson@email.sjsu.edu,18,Faculty
+Schallberger,Lou,3821,ENG,115A,lrshall@coe.sjsu.edu,20,Technician
+Selvaduray,Guna,3874,ENG,179,gunas@email.sjsu.edu,16,Faculty
+Seto,William,3847,ENG,310J,setow@email.sjsu.edu,20,Faculty
+Shelton,Kate,3968,ENG,491,kshelton@emai.l.sjsu.edu,3,Secretary
+Shim,Simon,4058,ENG,283F,sishim@email.sjsu.edu,18,Faculty
+Simpson,Sue,7526,ENG,491,csimpson@email.sjsu.edu,3,Coordinator
+Singh,Avtar,3924,ENG,379,asingh@email.sjsu.edu,19,Faculty
+Singh,Ram,3854,ENG,157,rsingh@sjsuvm1.sjsu.edu,17,Faculty
+Single,Peg,4100,ENG,485J,pboyle@email.sjsu.edu,11,Mentornet Specialist
+Solano,Angela,3852,ENG,310,salanora@email.sjsu.edu,20,Secretary
+Sree Harsha,K. S.,4003,ENG,385D,ksreehar@email.sjsu.edu,16,Faculty
+Stotesberry,Jack,3937,ENG,346,jstotesb@email.sjsu.edu,19,Technician
+Strasilla,Udo,3920,ENG,259,ustrasil@email.sjsu.edu,19,Faculty
+Supan,Susan,3909,ENG,385A,n/a,16,Secretary
+Tamayo,Norma,3898,ENG,349,ntamayo@email.sjsu.edu,19,Secretary
+Teufel,Erwin,3815,ENG,186A,eteufel@email.sjsu.edu,4,Technician		
+Trammell,Bob,3807,ENG,493,rtrammel@email.sjsu.edu,4,Manager
+Tsai,Kuei-Wu,3902,ENG,493,kutsai@email.sjsu.edu,17,Faculty
+Tsai,Kuei-Wu,3902,ENG,493,kutsai@email.sjsu.edu,2,Dean
+Tsao,Jacob,4088,ENG,485F,n/a,18,Faculty	
+Voss,Madeleine,3797,ENG,366,mlvoss@email.sjsu.edu,9,Director
+Vukazich,Steven,3858,ENG,165,vukazich@email.sjsu.edu,17,Faculty
+Wang,Ji,4299,ENG,185,jiwang@email.sjsu.edu,20,Faculty
+Wayman,James,4037,ENG,493N,biometric@email.sjsu.edu,6,Director
+Wei,Belle,3950,ENG,349D,bwei@email.sjsu.edu,19,Chair	
+Wesley,Len,3928,ENG,277,lwesley@intellexus.com,18,Faculty	
+Wilkinson,Zach,3907,ENG,239A,zachw@email.sjsu.edu,5,Systems Analyst
+Williamson,Rhea,3849,ENG,153,rwilliam@email.sjsu.edu,17,Faculty
+Yabu,Joseph,3207,IS,103,jyabu@email.sjsu.edu,21,Faculty
+Yates,Janet,3853,ENG,159,jyates@email.sjsu.edu,17,Faculty
+Yeung,Ron,3813,ENG,163,mryeung@email.sjsu.edu,17,Faculty
+Young,Greg,3945,ENG,385G,glyoung@email.sjsu.edu,16,Faculty 
+Yu,James,3215,IS,102,jameshyu@email.sjsu.edu,21,Faculty
+Zargar,Ali,3194,IS,102,azargar@email.sjsu.edu,3,Advisor
+Zargar,Ali,3194,IS,102,azargar@email.sjsu.edu,21,Faculty
+Zoroofchi,Javad,3919,ENG,255,n/a,19,Faculty

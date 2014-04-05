@@ -1,0 +1,57 @@
+<HTML>
+<HEAD>
+<TITLE>Query results</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<table BORDER="1">
+<tr BGCOLOR="#C0C0C0"><th>TRUNC(LOGON)</th><th>MIN</th><th>MAX</th><th>AVG</th></tr>
+<tr><td>10-MAY-01</td>
+<td>0</td>
+<td>440</td>
+<td>50</td>
+</tr>
+</tr>
+<tr><td>11-MAY-01</td>
+<td>0</td>
+<td>361</td>
+<td>42</td>
+</tr>
+</tr>
+<tr><td>12-MAY-01</td>
+<td>0</td>
+<td>421</td>
+<td>48</td>
+</tr>
+</tr>
+<tr><td>13-MAY-01</td>
+<td>2</td>
+<td>266</td>
+<td>57</td>
+</tr>
+</tr>
+<tr><td>14-MAY-01</td>
+<td>0</td>
+<td>453</td>
+<td>39</td>
+</tr>
+</tr>
+<tr><td>15-MAY-01</td>
+<td>0</td>
+<td>825</td>
+<td>41</td>
+</tr>
+</tr>
+<tr><td>16-MAY-01</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tr>
+<tr><td>17-MAY-01</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</table>
+</BODY>

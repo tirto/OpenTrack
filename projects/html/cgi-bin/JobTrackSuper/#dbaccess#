@@ -1,0 +1,10 @@
+# We get the login and password to access the database
+open(FILE,"/home/httpd/.jobDBAccess");
+$DBlogin = <FILE>;
+$DBpassword = <FILE>;
+    # Let's get rid of that newline character
+    chop $DBlogin;
+    chop $DBpassword;
+    
+    my $dbh = DBI->connect('DBI:Oracle:', $DBlogin, $DBpassword, {PrintError => 1,RaiseError =>1 })
+	or die "connecting:  $DBI::errstr";

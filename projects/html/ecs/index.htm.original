@@ -1,0 +1,147 @@
+<html>
+
+<head>
+<title>Your Homepage</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<p align="center"><img src="http://www.engr.sjsu.edu/images/jpgs/banner.jpg"
+alt="Welcome to the College of Engineering"></p>
+
+<p align="center"><strong><big>Please replace this page with your home page.</big></strong></p>
+<font face="Arial"><font color="#000080" size="3"><b>
+
+<p align="center"><big>Instructions for Setting Up the &quot;public_html&quot; Directory</big><br>
+</p>
+
+<p></b><font size="3">The general idea is that you need to have a directory within your
+home directory on the login server that is named &quot;public_html.&quot; Once we created
+that directory, set the permissions for world readability, you can locate your web
+documents and graphics files within the directory, you will be able to access your site
+with one of the following URLs (your choice):</font></p>
+
+<blockquote>
+  <p><font size="3">http://www.engr.sjsu.edu/~username<br>
+  http://www.engr.sjsu.edu/username</font></p>
+</blockquote>
+
+<p><font size="3">where &quot;username&quot; is replaced with your specific COE Web login
+(username). The &quot;~username&quot; is merely an alias for
+&quot;/home/username/public_html&quot; so that others trying to access your site do not
+have to enter that entire string, but just a tilde (~) and a user's login. You may also
+create subdirectories within the &quot;public_html&quot; directory, and as long as you
+include them in the path of the URL, you can access those documents through the web as
+well. For example, if you have a file that you would like to use named &quot;bkg.gif&quot;
+within a subdirectory named &quot;images,&quot; you could call the file in the HTML
+document (or from your web browser) as:</font></p>
+
+<blockquote>
+  <p><font size="3">http://www.engr.sjsu.edu/~username/images/bkg.gif</font></p>
+</blockquote>
+
+<p><font size="3">or as a relative URL in a document located within the
+&quot;public_html&quot; directory as:</font></p>
+
+<blockquote>
+  <p><font size="3">images/bkg.gif</font></p>
+</blockquote>
+
+<p><font size="3">The detailed process is as follows.</font> 
+
+<ul>
+  <li><font size="3">Connect to the COE Web with your Internet access.</font></li>
+  <li><font size="3">Launch your FTP client software, either Fetch or WS FTP (or another FTP
+    client of your choosing)</font></li>
+  <li><font size="3">Perform a NON-ANONYMOUS login to your account space using the following
+    information (text in [brackets] must be replaced with your specific information):</font></li>
+</ul>
+
+<blockquote>
+  <ol>
+    <li><font size="3">Remote Host: www.engr.sjsu.edu</font></li>
+    <li><font size="3">Login (User ID): [your login at COE Web]</font></li>
+    <li><font size="3">Password: [your COE Web password]</font></li>
+    <li><font size="3">Initial Directory: LEAVE BLANK</font></li>
+  </ol>
+</blockquote>
+
+<p><font size="3">When you connect to the server, since you are performing a NON-ANONYMOUS
+login with FTP, you should end up at your home directory, which is just where you want to
+be.</font></p>
+
+<p><font size="3">Create a new directory (in Fetch, select &quot;Create New
+Directory&quot; from the &quot;Directories&quot; pull-down menu - in WS FTP, click on the
+&quot;mkdir&quot; button next to the upper left window) named:</font> 
+
+<ul>
+  <li><font size="3">public_html</font></li>
+</ul>
+
+<p><font size="3">In most cases, it should already have the permissions set to the proper
+levels, which are:</font> 
+
+<ul>
+  <li><font size="3">owner (&quot;user&quot;): read, write, execute</font></li>
+  <li><font size="3">group: read, execute</font></li>
+  <li><font size="3">other: read, execute</font></li>
+</ul>
+
+<p><font size="3">You will know that you need to alter the permissions IF you try to look
+at your web site in a browser with the URL format shown above and are denied access. If
+you get an error message instead of an &quot;index of...&quot; page, you need to adjust
+the permissions to the above levels.</font></p>
+
+<p><font size="3">To do that with Fetch (MAC), go to your home directory if you are not
+already there, select the &quot;public_html&quot; directory in the window by clickingonce
+on it, then select &quot;Set Permissions&quot; from under the &quot;Remote&quot; pull-down
+menu. The resulting window that appears lets you select which permissions to give what
+users. Please set them to match those listed above.</font></p>
+
+<p><font size="3">NOTE: All text files (HTML, CGI documents) must be uploaded with ASCII
+mode on, whereas any images, sound files, etc. must be uploaded with Binary mode on. In
+both Fetch and WS FTP, you can select &quot;Auto&quot; and the software will automatically
+determine which mode must be used for each file you transfer.</font></p>
+
+<p><font size="3">Again, if you need help figuring this out, see our online documentation
+on using your software (URLs for these pages listed at the top of this document).</font></p>
+
+<p><font size="3">Your site will be accessible with one of the following URLs: <br>
+</font></p>
+
+<blockquote>
+  <p><font size="3">http://www.engr.sjsu.edu/~username <br>
+  http://www.engr.sjsu.edu/username&nbsp; </font></p>
+</blockquote>
+
+<p><font size="3"><br>
+Where &quot;username&quot; is replaced with your login. If your login is &quot;jdoe,&quot;
+your site's URL will be any of these: <br>
+</font></p>
+
+<blockquote>
+  <p><font size="3">http://www.engr.sjsu.edu/~jdoe <br>
+  http://www.engr.sjsu.edu/jdoe</font></p>
+</blockquote>
+
+<p><font size="3">If you have any questions about these rules or about possible violations
+of these rules, please send an email message to:</font></p>
+<div align="center"><center>
+
+<table width="500">
+  <tr>
+    <td height="21" width="236"><p align="left"><font face="Arial" size="2">Webmaster: Pham,
+    Scott</font></td>
+    <td height="21" width="102"><p align="right"><font face="Arial" size="2">4/4020</font></td>
+    <td height="21" width="117"><p align="right"><font face="Arial" size="2">E245</font></td>
+    <td height="21" width="227"><p align="right"><font face="Arial" size="2"><a
+    href="mailto:shpham@email.sjsu.edu">shpham@email.sjsu.edu</a></font></td>
+  </tr>
+</table>
+</center></div>
+
+<p align="center"><strong>Web Services</strong></font><font size="2"><br>
+<a href="http://www.engr.sjsu.edu/coeweb/policy/Default.htm">Policy</a> | <a
+href="http://www.engr.sjsu.edu/coeweb/newuser/request.htm">Account Registration</a></font></font></p>
+</body>
+</html>

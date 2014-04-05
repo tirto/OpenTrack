@@ -1,0 +1,124 @@
+#!/usr/bin/perl -w
+
+use DBI;
+
+########## SET UP A PATH TO THE DATA WAREHOUSE ##########
+BEGIN
+{
+    $ENV{ORACLE_HOME} = "/projects/oracle";
+    $ENV{ORACLE_SID} = "ware";
+}
+
+########## OPEN CONNECTION WITH THE DATA WAREHOUSE ##########
+my ($dbh, $sth, $term, $rv, $outfile, $all, $last,
+    $homedrive, $homepath, @row, %oldusers);
+
+if ($#ARGV != 2) {
+    die "Usage: $0 [term] [oldfile] [outfile]\n";
+}
+$term = $ARGV[0];
+$oldfile = $ARGV[1];
+$outfile = $ARGV[2];
+
+$homedrive = 'E:';
+$homepath='\\\\COELABS-1\Workstation';
+
+$all = '';
+$last = '';
+
+print "Extracting list of students taking engineering courses\n";
+print "for the term $term and storing into the file $outfile.\n";
+print "This process may take 3 to 5 minutes.\n";
+
+open(INPUT, "< $oldfile") or die "Opening: $oldfile";
+
+# load up existing list of users
+while (<INPUT>) {
+    chop;
+    @row = split /,/;
+    next if $row[0] eq '[User]';
+    last if $row[0] eq '[Global]';
+    $oldusers{$row[0]} = 1;
+}
+
+$dbh = open_database("/home/httpd/.wareAccess");
+
+$sth = $dbh->prepare(qq{SELECT DISTINCT lower(substr(b.bio_name, 1, least(instr(replace(replace(b.bio_name,'-'),?), ', ')-1,5))) || substr(b.bio_sid,5,5),
+			initcap(rtrim(b.bio_name)),
+			to_char(b.bio_birth_dt, 'MMDDYY')
+			    FROM warehouse.wh_bio_demo b,
+			    warehouse.wh_crswork w
+				WHERE b.bio_sid = w.cwk_sid AND
+				    w.cwk_term = ? AND
+					w.cwk_sp_status = 'E' AND
+					    (w.cwk_sp_course LIKE 'AE  %' OR
+					     w.cwk_sp_course LIKE 'AVIA%' OR
+					     w.cwk_sp_course LIKE 'CHE %' OR
+					     w.cwk_sp_course LIKE 'CMPE%' OR
+					     w.cwk_sp_course LIKE 'CE  %' OR
+					     w.cwk_sp_course LIKE 'EE  %' OR
+					     w.cwk_sp_course LIKE 'ENGR%' OR
+					     w.cwk_sp_course LIKE 'ISE %' OR
+					     w.cwk_sp_course LIKE 'MATE%' OR
+					     w.cwk_sp_course LIKE 'ME  %' OR
+					     w.cwk_sp_course LIKE 'TECH%')});
+$rv = $sth->execute("'", $term) or die "Executing: $sth->errstr";
+
+open(OUTPUT, "> $outfile") or die "Opening: $outfile";
+
+print OUTPUT "[User]\n";
+
+while (@row = $sth->fetchrow_array) {
+    # skip people with no password(birthdate)
+    next unless defined $row[2];
+    
+    # usernames are saved to use place in student group
+    $username = $row[0];
+
+    if ($username eq $last) {
+	print "Duplicate username $last\n";
+    }
+
+    # only output users don't already exist in the old list
+    unless (exists $oldusers{$username}) {
+	$last = $username;
+	$all = $all . $username . ",";
+
+	# reorder users fullname from 'last, first' to 'first last'
+	$fullname = join(" ", reverse split(", ",$row[1]));
+	$password = $row[2];
+
+	print OUTPUT "$username,$fullname,$password,,$homedrive,$homepath,,\n";
+    }
+}
+
+print OUTPUT "[Global]\n";
+print OUTPUT "StudentGG,Engineering students,$all\n";
+print OUTPUT "[Local]\n";
+
+print "Success!\n";
+    
+$sth->finish;
+$dbh->disconnect;
+
+########## OPEN CONNECTION TO DATABASE ##########
+sub open_database($) {
+# Description: get database login and password from
+#   file and open a database.
+# Onput: access file
+# Output: handle to database
+
+    my $access_file = shift(@_);
+
+    open(FILE, $access_file) or
+        die "no password file $access_file";
+
+    chop($DBlogin = <FILE>);
+    chop($DBpassword = <FILE>);
+    $dbh = DBI->connect('DBI:Oracle:', $DBlogin, $DBpassword,
+                        {PrintError=>1, RaiseError=>1}) or
+                            die "Connecting: $DBI::errstr";
+
+    close(FILE);
+    return $dbh;
+}

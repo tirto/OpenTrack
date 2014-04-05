@@ -1,0 +1,17 @@
+BODY {
+	background-color : White;
+	background-image : url(edge.gif);
+	background-repeat : repeat-y;
+	font-family : "Berlin sans Sans FB Demi", "Bauhaus 93", Arial;
+	font-style : normal;
+	font-weight : 600;
+	line-height : 200%;
+	font-size : medium;
+}
+P:first-letter {
+	font : x-large;
+}
+
+
+
+

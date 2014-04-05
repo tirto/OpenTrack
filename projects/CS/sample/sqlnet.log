@@ -1,0 +1,149 @@
+
+
+***********************************************************************
+Fatal NI connect error 12224, connecting to:
+ (DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(Host=130.65.156.60)(Port=1521))(CONNECT_DATA=(SID=rdb1)(CID=(PROGRAM=)(HOST=dolphin.engr.sjsu.edu)(USER=tadji))))
+
+  VERSION INFORMATION:
+	TNS for Linux: Version 8.0.5.0.0 - Production
+	Oracle Bequeath NT Protocol Adapter for Linux: Version 8.0.5.0.0 - Production
+	TCP/IP NT Protocol Adapter for Linux: Version 8.0.5.0.0 - Production
+  Time: 12-JAN-01 15:55:56
+  Tracing not turned on.
+  Tns error struct:
+    nr err code: 12224
+    TNS-12224: TNS:no listener
+    ns main err code: 12541
+    TNS-12541: TNS:no listener
+    ns secondary err code: 12560
+    nt main err code: 511
+    TNS-00511: No listener
+    nt secondary err code: 111
+    nt OS err code: 0
+
+
+***********************************************************************
+Fatal NI connect error 12224, connecting to:
+ (DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(Host=130.65.156.60)(Port=1521))(CONNECT_DATA=(SID=rdb1)(CID=(PROGRAM=)(HOST=dolphin.engr.sjsu.edu)(USER=tadji))))
+
+  VERSION INFORMATION:
+	TNS for Linux: Version 8.0.5.0.0 - Production
+	Oracle Bequeath NT Protocol Adapter for Linux: Version 8.0.5.0.0 - Production
+	TCP/IP NT Protocol Adapter for Linux: Version 8.0.5.0.0 - Production
+  Time: 12-JAN-01 15:56:14
+  Tracing not turned on.
+  Tns error struct:
+    nr err code: 12224
+    TNS-12224: TNS:no listener
+    ns main err code: 12541
+    TNS-12541: TNS:no listener
+    ns secondary err code: 12560
+    nt main err code: 511
+    TNS-00511: No listener
+    nt secondary err code: 111
+    nt OS err code: 0
+
+
+***********************************************************************
+Fatal NI connect error 12224, connecting to:
+ (DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(Host=130.65.156.60)(Port=1521))(CONNECT_DATA=(SID=rdb1)(CID=(PROGRAM=)(HOST=dolphin.engr.sjsu.edu)(USER=tadji))))
+
+  VERSION INFORMATION:
+	TNS for Linux: Version 8.0.5.0.0 - Production
+	Oracle Bequeath NT Protocol Adapter for Linux: Version 8.0.5.0.0 - Production
+	TCP/IP NT Protocol Adapter for Linux: Version 8.0.5.0.0 - Production
+  Time: 12-JAN-01 15:57:05
+  Tracing not turned on.
+  Tns error struct:
+    nr err code: 12224
+    TNS-12224: TNS:no listener
+    ns main err code: 12541
+    TNS-12541: TNS:no listener
+    ns secondary err code: 12560
+    nt main err code: 511
+    TNS-00511: No listener
+    nt secondary err code: 111
+    nt OS err code: 0
+
+
+***********************************************************************
+Fatal NI connect error 12224, connecting to:
+ (DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(Host=130.65.156.60)(Port=1521))(CONNECT_DATA=(SID=rdb1)(CID=(PROGRAM=)(HOST=ecs-staff14)(USER=tadji))))
+
+  VERSION INFORMATION:
+	TNS for Linux: Version 8.0.5.0.0 - Production
+	TCP/IP NT Protocol Adapter for Linux: Version 8.0.5.0.0 - Production
+  Time: 16-JAN-01 10:34:02
+  Tracing not turned on.
+  Tns error struct:
+    nr err code: 12224
+    TNS-12224: TNS:no listener
+    ns main err code: 12541
+    TNS-12541: TNS:no listener
+    ns secondary err code: 12560
+    nt main err code: 511
+    TNS-00511: No listener
+    nt secondary err code: 111
+    nt OS err code: 0
+
+
+***********************************************************************
+Fatal NI connect error 12224, connecting to:
+ (DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(Host=130.65.156.60)(Port=1521))(CONNECT_DATA=(SID=rdb1)(CID=(PROGRAM=)(HOST=ecs-staff14)(USER=tadji))))
+
+  VERSION INFORMATION:
+	TNS for Linux: Version 8.0.5.0.0 - Production
+	TCP/IP NT Protocol Adapter for Linux: Version 8.0.5.0.0 - Production
+  Time: 16-JAN-01 11:36:18
+  Tracing not turned on.
+  Tns error struct:
+    nr err code: 12224
+    TNS-12224: TNS:no listener
+    ns main err code: 12541
+    TNS-12541: TNS:no listener
+    ns secondary err code: 12560
+    nt main err code: 511
+    TNS-00511: No listener
+    nt secondary err code: 111
+    nt OS err code: 0
+
+
+***********************************************************************
+Fatal NI connect error 12224, connecting to:
+ (DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(Host=130.65.156.60)(Port=1521))(CONNECT_DATA=(SID=rdb1)(CID=(PROGRAM=)(HOST=ecs-staff14)(USER=tadji))))
+
+  VERSION INFORMATION:
+	TNS for Linux: Version 8.0.5.0.0 - Production
+	TCP/IP NT Protocol Adapter for Linux: Version 8.0.5.0.0 - Production
+  Time: 16-JAN-01 11:36:38
+  Tracing not turned on.
+  Tns error struct:
+    nr err code: 12224
+    TNS-12224: TNS:no listener
+    ns main err code: 12541
+    TNS-12541: TNS:no listener
+    ns secondary err code: 12560
+    nt main err code: 511
+    TNS-00511: No listener
+    nt secondary err code: 111
+
+
+***********************************************************************
+Fatal NI connect error 12224, connecting to:
+ (DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(Host=130.65.156.60)(Port=1521))(CONNECT_DATA=(SID=rdb1)(CID=(PROGRAM=)(HOST=ecs-staff14)(USER=tadji))))
+
+  VERSION INFORMATION:
+	TNS for Linux: Version 8.0.5.0.0 - Production
+	TCP/IP NT Protocol Adapter for Linux: Version 8.0.5.0.0 - Production
+  Time: 16-JAN-01 12:00:42
+  Tracing not turned on.
+  Tns error struct:
+    nr err code: 12224
+    TNS-12224: TNS:no listener
+    ns main err code: 12541
+    TNS-12541: TNS:no listener
+    ns secondary err code: 12560
+    nt main err code: 511
+    TNS-00511: No listener
+    nt secondary err code: 111
+    nt OS err code: 0

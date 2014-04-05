@@ -1,0 +1,7 @@
+AuthName Info
+AuthType Basic
+AuthUserFile /home/httpd/.infoAccess
+
+<Limit GET POST>
+require	valid-user
+</limit>

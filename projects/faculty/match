@@ -1,0 +1,103 @@
+#!/usr/bin/perl -w
+
+use DBI;
+
+BEGIN
+{
+    $ENV{ORACLE_HOME} = "/projects/oracle";
+    $ENV{ORACLE_SID} = "rdb1";
+}
+
+my ($dbh, $sth, $rdv, @row);
+my ($infile, @csv, $fullname, $rv);
+
+if ($#ARGV != 0) {
+    die "Usage: $0 [faculty]\n";
+}
+$infile = $ARGV[0];
+
+$dth = open_database("/home/httpd/.jobDBAccess");
+
+open(INPUT, "< $infile") or die "Opening: $infile";
+open(OUTPUT1, "> $infile.matched") or die "Creating: $infile.matched";
+open(OUTPUT2, "> $infile.differ") or die "Creating: $infile.matched";
+open(OUTPUT3, "> $infile.local") or die "Creating: $infile.matched";
+open(OUTPUT4, "> $infile.unknown") or die "Creating: $infile.matched";
+
+while (<INPUT>) {
+    chop;
+    @csv = split /,/;
+
+    # skip certain types of employees
+    next if $csv[3] eq 'TA' or $csv[3] eq 'GA';
+
+    # do an ldap search by fullname
+    $fullname = ucfirst lc($csv[1]) . " " . ucfirst lc($csv[2]);
+    $rv = ldap_search($fullname);
+
+    # do an sql search by fullname
+    $sth = $dbh->prepare(qq{SELECT e.firstname, e.lastname, e.email,
+			    p.title, p.phone
+				FROM employee e, position p
+				    WHERE upper(rtrim(firstname)) = upper(rtrim(?))
+					AND upper(rtrim(lastname)) = upper(rtrim(?))
+					    AND e.id = p.employeeid});
+    $rdv = $sth->execute($csv[1], $csv[2]) or die "Executing: $sth->errstr";
+    @row = $sth->fetchrow_array;
+    $sth->finish;
+
+    if ($rv and @row) {
+	# ldap and sql search found
+	if (($rv->{"mail"} eq $row[2])
+	    and ($rv->{"telephonenumber"} eq $row[4])) {
+	    print OUTPUT1 $rv->{"cn"}, ":", $rv->{"mail"}, ":";
+	    print OUTPUT1 $rv->{"telephonenumber"}, ":", $rv->{"title"}, ":";
+	    print OUTPUT1 $rv->{"department"}, "\n";
+	} else {
+	    print OUTPUT2 $rv->{"cn"}, ":", $rv->{"mail"}, ":";
+	    print OUTPUT2 $rv->{"telephonenumber"}, ":", $rv->{"title"}, ":";
+	    print OUTPUT2 $rv->{"department"}, "\n";
+	}
+    } elsif ($rv) {
+	print OUTPUT3 $fullname, "\n";
+    } else {
+	print OUTPUT4 $fullname, "\n";
+    }
+}
+
+sub ldap_search {
+    my $name = shift;
+    my (@output, %fields, $line, @pair);
+    
+    # pipe request to ldapsearch program
+    @output = `ldapsearch "cn=$name"`;
+
+    # return undef if person not found
+    return undef if ($#output < 0);
+
+    # otherwise parse into field/value pairs
+    # and store into hash structure
+    foreach $line (@output) {
+	chop($line);
+	@pair = split /=/, $line, 2;
+	$fields{$pair[0]} = $pair[1] if defined $pair[1];
+    }
+
+    return \%fields;
+}
+
+sub open_database($) {
+    my $access_file = shift(@_);
+
+    open(FILE, $access_file) or
+        die "no password file $access_file";
+
+    chop($DBlogin = <FILE>);
+    chop($DBpassword = <FILE>);
+    $dbh = DBI->connect('DBI:Oracle:', $DBlogin, $DBpassword,
+                        {PrintError=>1, RaiseError=>1}) or
+                            die "Connecting: $DBI::errstr";
+
+    close(FILE);
+    return $dbh;
+}

@@ -1,0 +1,1081 @@
+package infolib;
+
+use Exporter;
+@ISA = qw(Exporter);
+@EXPORT = qw(AddEntry Form GetDeptList ListHeaderTitle ListReport SearchByDept
+	SearchByName SearchByWildCard SearchForNA UpdateEntry
+	%status @titles);
+
+use DBI;
+use CGI qw/:standard :html3/;
+
+# Project: Job Tracking System
+# File:    infolib.pl
+# By:      Prasanth Kumar
+# Date:    Jun 29, 2000
+
+# Description:
+# Employee query library routines
+
+# ChangeLog:
+# 06/29/2000 Prasanth Kumar
+# - Modified all routines reading firstname and lastname to permit
+#   (or force) uppercase letters after dash
+
+#########################################
+#					#
+#      	     GLOBAL VARIABLES	        #
+#					#
+#########################################
+
+$mt = 'N/A';
+
+%buildings = ("ENG"=>"Engineering Building",
+		"IS"=>"Industrial Studies");
+
+%status = ("FULL-TIME"=>"Full Time",
+	"INACTIVE"=>"Inactive",
+	"PART-TIME"=>"Part Time");
+
+@titles = ("Not Available",
+	"Acting Chair", 
+	"Advisor",
+	"Chair",
+	"Clerk",
+	"Coordinator",
+	"Dean",
+	"Development Assistant",
+	"Director",
+	"Director Development",
+	"Faculty",
+	"Manager",
+	"Mentornet Specialist",
+	"Network Analyst",
+	"Project Manager",
+	"Secretary",
+	"Senior Secretary",
+	"System Administrator",
+	"System Analyst",
+	"Technician",
+	"Webmaster"
+	);
+
+BEGIN
+{
+	$ENV{ORACLE_HOME} = "/projects/oracle";
+	$ENV{ORACLE_SID} = "rdb1";
+}
+
+
+########################################
+#                                      #
+#          SUBROUTINE SECTION          #
+#                                      #
+########################################
+
+
+sub SearchByWildCard {
+# Description: Search an entry by wild card.
+# Input: Search criteria (first few characters of either first or last name).
+# Output: 0 if input are valid. Array of reference to records is returned.
+#	  4 if the name is not found.
+
+
+	my $opts = shift @_;
+	my $sth;
+	my $ary_ref;
+
+	# Parsing search criteria.
+	my ($wildcard, $bool) = split /_/, $opts;
+	$wildcard = ucfirst lc $wildcard;
+
+	# We get the login and password to access the database
+	open(FILE,"/home/httpd/.jobDBAccess");
+	$DBlogin = <FILE>;
+	$DBpassword = <FILE>;
+	# Let's get rid of that newline character
+	chop $DBlogin;
+	chop $DBpassword;
+
+	my $dbh = DBI->connect('DBI:Oracle:', $DBlogin, $DBpassword, {PrintError => 1,RaiseError =>1 })
+	    or die "connecting:  $DBI::errstr";
+	
+	# Search by first name.
+	if ($bool eq 'first') {
+		$sth = $dbh->prepare(qq{SELECT * FROM employee, position
+			WHERE
+			employee.firstname LIKE '$wildcard%' AND
+			employee.id=position.employeeid});
+	}
+
+	# Search by last name only.
+	elsif ($bool eq 'last') {
+		$sth = $dbh->prepare(qq{SELECT * FROM employee, position 
+				WHERE
+				employee.lastname LIKE '$wildcard%' AND
+				employee.id=position.employeeid});
+	}
+
+	# Search by either first name or last name.
+	else {
+		$sth = $dbh->prepare(qq{SELECT * FROM employee, position 
+				WHERE
+				(employee.lastname LIKE '$wildcard%' OR
+				employee.firstname LIKE '$wildcard%') AND
+				employee.id=position.employeeid});
+	}
+
+	# Querying.
+	$sth->execute or die "Executing: $sth->errstr";
+	$ary_ref = $sth->fetchall_arrayref;
+	$sth->finish;
+	$dbh->disconnect;
+
+	# There is one or more record matched. Return the list.
+	if (@$ary_ref >= 1) {
+		return (0, $ary_ref);
+	}
+
+	# There is not any record matched. Return error.
+	else {
+		return 4;
+	}
+} # End SearchByWildCard
+
+
+sub ListReport {
+# Description: List records by first name, last name, and title.
+#	Only 15 records are displayed in one page.
+# Input: The script that will list these record in details.
+#	 A reference to array of the records.
+#	 Starting index to be displayed.
+#	 Search criteria.
+# Output: None.
+
+	my $ref_ary = $_[0];
+	my $numb = $_[1];
+	my $name = $_[2];
+	my $titl = $_[3];
+	my $dept = $_[4];
+	my $phon = $_[5];
+	my $emai = $_[6];
+	my $buil = $_[7];
+	my $room = $_[8];
+	my $temp;
+	my %depts;
+
+	if ($dept eq 'yes') {
+		# Get the list of department.
+		my $dept_list = GetDeptList();
+		foreach $i (0 .. $#$dept_list) {
+			$j = $dept_list->[$i];
+			$depts{$j->[0]}=$j->[1];
+		}
+	}
+
+	# Format the table to display all record headers.
+	print '<table bgcolor=ffffff border=0 cellspacing=5 cellpadding=0 align=left>';
+
+	# Format the id of the record into a string.
+	# This string id is used to search for next and previous record
+	# in the list.
+	my $order;
+	foreach $i(0 .. $#$ref_ary) {
+		$order_num = $i + 1;
+		$temp = $ref_ary->[$i];
+
+		print '<Tr>';
+		if ($numb eq 'yes') {
+			print "<td valign=top>$order_num<\/td>";
+		}
+		if ($name eq 'yes') {
+			print "<td valign=top>$temp->[2], $temp->[1]<\/a><\/td>";
+		}
+		if ($titl eq 'yes') {
+			print "<td valign=top>$temp->[8]<\/td>";
+		}
+		if ($dept eq 'yes') {
+			print "<td valign=top>$depts{$temp->[10]}<\/td>";
+		}
+		if ($phon eq 'yes') {
+			print "<td valign=top>$temp->[11]<\/td>";
+		}
+		if ($emai eq 'yes') {
+			print "<td valign=top>$temp->[4]<\/td>";
+		}
+		if ($buil eq 'yes') {
+			print "<td valign=top>$temp->[12]<\/td>";
+		}
+		if ($room eq 'yes') {
+			print "<td valign=top>$temp->[13]<\/td>";
+		}
+		print '</Tr>';
+	} 
+
+	print '</table>';
+
+} # End ListReport.
+
+
+sub SearchForNA {
+# Description: Search for N/A fields in all records.
+# Input: Search criteria (dept, title, and status).
+# Output: 0 if input are valid. Array of reference to records is returned.
+#	  1 if there is not any entry found.
+
+	my $opts = shift @_;
+	my $sth;
+	my $ary_ref;
+
+	# We get the login and password to access the database
+	open(FILE,"/home/httpd/.jobDBAccess");
+	$DBlogin = <FILE>;
+	$DBpassword = <FILE>;
+	# Let's get rid of that newline character
+	chop $DBlogin;
+	chop $DBpassword;
+
+	my $dbh = DBI->connect('DBI:Oracle:', $DBlogin, $DBpassword, {PrintError => 1,RaiseError =>1 })
+	    or die "connecting:  $DBI::errstr";
+
+	# Parsing search criteria.
+	($dept, $title, $status) = split /_/, $opts;
+
+	if ($dept == 0 && $title eq 'All' && $status eq 'All') {
+		$sth = $dbh->prepare(qq{SELECT * FROM employee, position
+					WHERE (position.phone='$mt' OR
+					position.roomnumber='$mt' OR
+					employee.email='$mt') AND
+					employee.id=position.employeeid
+					ORDER by employee.lastname});
+	}
+	elsif ($dept == 0 && $title eq 'All' && $status ne 'All') {
+		$sth = $dbh->prepare(qq{SELECT * FROM employee, position
+					WHERE employee.employeestatus='$status'
+					AND (position.phone='$mt' OR
+					position.roomnumber='$mt' OR
+					employee.email='$mt') AND
+					position.employeeid=employee.id
+					ORDER by employee.lastname});
+	}
+	elsif ($dept == 0 && $title ne 'All' && $status eq 'All') {
+		$sth = $dbh->prepare(qq{SELECT * FROM employee, position
+					WHERE position.title='$title'
+					AND (position.phone='$mt' OR
+					position.roomnumber='$mt' OR
+					employee.email='$mt')
+					AND employee.id=position.employeeid
+					ORDER by employee.lastname});
+	}
+	elsif ($dept == 0 && $title ne 'All' && $status ne 'All') {
+		$sth = $dbh->prepare(qq{SELECT * FROM employee, position
+					WHERE (employee.employeestatus='$status'
+					AND position.title='$title')
+					AND (position.phone='$mt' OR
+					position.roomnumber='$mt' OR
+					employee.email='$mt')
+					AND employee.id=position.employeeid
+					ORDER by employee.lastname});
+	}
+	elsif ($dept != 0 && $title ne 'All' && $status ne 'All') {
+		$sth = $dbh->prepare(qq{SELECT * FROM employee, position
+					WHERE (employee.employeestatus='$status'
+					AND position.staffdept='$dept'
+					AND position.title='$title')
+					AND (position.phone='$mt' OR
+					position.roomnumber='$mt' OR
+					employee.email='$mt')
+					AND employee.id=position.employeeid
+					ORDER by employee.lastname});
+	}
+	elsif ($dept != 0 && $title ne 'All' && $status eq 'All') {
+		$sth = $dbh->prepare(qq{SELECT * FROM employee, position
+					WHERE (position.staffdept='$dept'
+					AND position.title='$title')
+					AND (position.phone='$mt' OR
+					position.roomnumber='$mt' OR
+					employee.email='$mt')
+					AND employee.id=position.employeeid
+					ORDER by employee.lastname});
+	}
+	elsif ($dept != 0 && $title eq 'All' && $status eq 'All') {
+		$sth = $dbh->prepare(qq{SELECT * FROM employee, position
+					WHERE position.staffdept='$dept'
+					AND (position.phone='$mt' OR
+					position.roomnumber='$mt' OR
+					employee.email='$mt')
+					AND employee.id=position.employeeid
+					ORDER by employee.lastname});
+	}
+	elsif ($dept != 0 && $title eq 'All' && $status ne 'All') {
+		$sth = $dbh->prepare(qq{SELECT * FROM employee, position
+					WHERE (employee.employeestatus='$status'
+					AND position.staffdept='$dept')
+					AND (position.phone='$mt' OR
+					position.roomnumber='$mt' OR
+					employee.email='$mt')
+					AND employee.id=position.employeeid
+					ORDER by employee.lastname});
+	}
+	else {
+		return 2;	# Unknown error
+	}
+	
+	# Querying.
+	$sth->execute or die "Executing: $sth->errstr";
+	$ary_ref = $sth->fetchall_arrayref;
+	$sth->finish;
+	$dbh->disconnect;
+
+	# There is one or more record matched. Return the list.
+	if (@$ary_ref >= 1) {
+#print "Total found $#$ary_ref<br>\n";
+		return (0, $ary_ref);
+	}
+
+	# There is not any record matched. Return error.
+	else {
+		return 1;
+	}
+} #End SearchForNA
+
+
+sub SearchByDept {
+# Description: Search an entry by department, title, and status.
+# Input: Search criteria (dept, title, and status).
+# Output: 0 if input are valid. Array of reference to records is returned.
+#	  1 if there is not any entry found.
+
+	my $opts = shift @_;
+	my $sth;
+	my $ary_ref;
+
+	# We get the login and password to access the database
+	open(FILE,"/home/httpd/.jobDBAccess");
+	$DBlogin = <FILE>;
+	$DBpassword = <FILE>;
+	# Let's get rid of that newline character
+	chop $DBlogin;
+	chop $DBpassword;
+
+	my $dbh = DBI->connect('DBI:Oracle:', $DBlogin, $DBpassword, {PrintError => 1,RaiseError =>1 })
+	    or die "connecting:  $DBI::errstr";
+
+	# Parsing search criteria.
+	($dept, $title, $status) = split /_/, $opts;
+
+	if ($dept == 0 && $title eq 'All' && $status eq 'All') {
+		$sth = $dbh->prepare(qq{SELECT * FROM employee, position
+					WHERE employee.id=position.employeeid
+					ORDER by employee.lastname});
+	}
+	elsif ($dept == 0 && $title eq 'All' && $status ne 'All') {
+		$sth = $dbh->prepare(qq{SELECT * FROM employee, position
+					WHERE employee.employeestatus='$status'
+					AND position.employeeid=employee.id
+					ORDER by employee.lastname});
+	}
+	elsif ($dept == 0 && $title ne 'All' && $status eq 'All') {
+		$sth = $dbh->prepare(qq{SELECT * FROM employee, position
+					WHERE position.title='$title'
+					AND employee.id=position.employeeid});
+	}
+	elsif ($dept == 0 && $title ne 'All' && $status ne 'All') {
+		$sth = $dbh->prepare(qq{SELECT * FROM employee, position
+					WHERE employee.employeestatus='$status'
+					AND position.title='$title'
+					AND employee.id=position.employeeid});
+	}
+	elsif ($dept != 0 && $title ne 'All' && $status ne 'All') {
+		$sth = $dbh->prepare(qq{SELECT * FROM employee, position
+					WHERE employee.employeestatus='$status'
+					AND position.staffdept='$dept'
+					AND position.title='$title'
+					AND employee.id=position.employeeid});
+	}
+	elsif ($dept != 0 && $title ne 'All' && $status eq 'All') {
+		$sth = $dbh->prepare(qq{SELECT * FROM employee, position
+					WHERE position.staffdept='$dept'
+					AND position.title='$title'
+					AND employee.id=position.employeeid});
+	}
+	elsif ($dept != 0 && $title eq 'All' && $status eq 'All') {
+		$sth = $dbh->prepare(qq{SELECT * FROM employee, position
+					WHERE position.staffdept='$dept'
+					AND employee.id=position.employeeid});
+	}
+	elsif ($dept != 0 && $title eq 'All' && $status ne 'All') {
+		$sth = $dbh->prepare(qq{SELECT * FROM employee, position
+					WHERE employee.employeestatus='$status'
+					AND position.staffdept='$dept'
+					AND employee.id=position.employeeid});
+	}
+	else {
+		return 2;	# Unknown error
+	}
+	
+	# Querying.
+	$sth->execute or die "Executing: $sth->errstr";
+	$ary_ref = $sth->fetchall_arrayref;
+	$sth->finish;
+	$dbh->disconnect;
+
+	# There is one or more record matched. Return the list.
+	if (@$ary_ref >= 1) {
+#print "Total found $#$ary_ref<br>\n";
+		return (0, $ary_ref);
+	}
+
+	# There is not any record matched. Return error.
+	else {
+		return 1;
+	}
+} # End SearchByDept.
+
+
+sub GetDeptList {
+# Description: Query the list of department from table 'staffdept'.
+#		 This list is used for pupup menu.
+# Input: None.
+# Output: A reference to the list of department.
+
+	# We get the login and password to access the database
+	open(FILE,"/home/httpd/.jobDBAccess");
+	$DBlogin = <FILE>;
+	$DBpassword = <FILE>;
+	# Let's get rid of that newline character
+	chop $DBlogin;
+	chop $DBpassword;
+
+	my $dbh = DBI->connect('DBI:Oracle:', $DBlogin, $DBpassword, {PrintError => 1,RaiseError =>1 })
+	    or die "connecting:  $DBI::errstr";
+
+	my $sth = $dbh->prepare(qq{SELECT *
+				FROM staffdept});
+	$sth->execute or die "Executing: $sth->errstr";
+	my $ary_ref = $sth->fetchall_arrayref;
+	$sth->finish;
+	$dbh->disconnect;
+	return $ary_ref;
+
+} # End GetDeptList.
+
+
+sub SearchByName {
+# Description: Search an entry by first name, last name, or both.
+# Input: Search criteria (first, last name, and boolean).
+# Output: 0 if input are valid. Array of reference to records is returned.
+#	  1 if bool is 'and' and first name is missing.
+#	  2 if bool is 'and' and last name is missing.
+#	  3 if first and last name are missing.
+#	  4 if the name is not found.
+
+
+	my $opts = shift @_;
+	my $sth;
+	my $ary_ref;
+
+	# Parsing search criteria.
+	($firstname, $bool, $lastname) = split /_/, $opts;
+
+	# Search by name, but did not enter any name.
+	if ($firstname eq '' && $lastname eq '') {
+		return 3;
+	}
+
+	# User choose search by both first and last.
+	# Check if both first and last name are provided.
+	if ($bool eq 'and') {
+
+		if ($firstname eq '') {
+			return 1;
+		}
+		
+		if ($lastname eq '') {
+			return 2;
+		}
+	}
+
+	# Uppercase first letter and lowercase everything
+	# else except that after a hypen.
+	$firstname = ucfirst lc $firstname;
+	$firstname =~ s/-([A-Za-z0-9]+)/-\L\u$1/g;
+
+	# Uppercase first letter and lowercase everything
+	# else except that after a hypen.
+	$lastname = ucfirst lc $lastname;
+	$lastname =~ s/-([A-Za-z0-9]+)/-\L\u$1/g;
+	
+	# We get the login and password to access the database
+	open(FILE,"/home/httpd/.jobDBAccess");
+	$DBlogin = <FILE>;
+	$DBpassword = <FILE>;
+	# Let's get rid of that newline character
+	chop $DBlogin;
+	chop $DBpassword;
+
+	my $dbh = DBI->connect('DBI:Oracle:', $DBlogin, $DBpassword, {PrintError => 1,RaiseError =>1 })
+	    or die "connecting:  $DBI::errstr";
+	
+	# Search by last name and first name.
+	if ($bool eq 'and') {
+		$sth = $dbh->prepare(qq{SELECT * FROM employee, position
+			WHERE
+			(employee.firstname='$firstname' AND
+			employee.lastname='$lastname') AND
+			(employee.id=position.employeeid)});
+	}
+
+	# Search by first name or last name only.
+	else {
+		$sth = $dbh->prepare(qq{SELECT * FROM employee, position 
+				WHERE
+				(employee.firstname='$firstname' OR
+				employee.lastname='$lastname') AND
+				(employee.id=position.employeeid)});
+	}
+
+	# Querying.
+	$sth->execute or die "Executing: $sth->errstr";
+	$ary_ref = $sth->fetchall_arrayref;
+	$sth->finish;
+	$dbh->disconnect;
+
+	# There is one or more record matched. Return the list.
+	if (@$ary_ref >= 1) {
+		return (0, $ary_ref);
+	}
+
+	# There is not any record matched. Return error.
+	else {
+		return 4;
+	}
+
+} # End SearchByName
+
+
+sub ListHeaderTitle {
+# Description: List records by first name, last name, and title.
+#	Only 10 records are displayed in one page.
+# Input: The script that will list these record in details.
+#	 A reference to array of the records.
+#	 Starting index to be displayed.
+#	 Search criteria.
+# Output: None.
+
+	my $script = shift @_;
+	my $ref_ary = shift @_;
+	my $cur_idx = shift @_;
+	my $opts = shift @_;
+	my $page_size = shift @_;
+	my $last_idx;
+	my $temp;
+
+	# Get the list of department.
+	my $dept_list = GetDeptList();
+	my %depts;
+	foreach $i (0 .. $#$dept_list) {
+		$j = $dept_list->[$i];
+		$depts{$j->[0]}=$j->[1];
+	}
+
+	# current index is out of bounce. Reset to zero.
+	if ($#$ref_ary < $cur_idx) {
+		$cur_dix = 0;
+	}
+
+	# Display 10 records at a time.
+	if ($#$ref_ary < ($cur_idx + ($page_size-1))) {
+		$last_idx = $#$ref_ary;
+	}
+	else {
+		$last_idx = $cur_idx + ($page_size-1);
+	}
+
+	# Format the table to display all record headers.
+	print '<table bgcolor=ffffff border=1 cellspacing=1 cellpadding=4 align=center>';
+	print '<Tr>';
+	print '<td bgcolor=peachpuff>&nbsp</td>';
+	print '<td align=center bgcolor=peachpuff>Name</td>';
+	print '<td align=center bgcolor=peachpuff>Title</td>';
+	print '<td align=center bgcolor=peachpuff>Department</td>';
+	print '<td align=center bgcolor=peachpuff>Phone</td>';
+	print '<td align=center bgcolor=peachpuff>Email</td>';
+	print '<td align=center bgcolor=peachpuff>Room</td>';
+	print '<td align=center bgcolor=peachpuff>Building</td>';
+	print '</tr>';
+
+	# Format the id of the record into a string.
+	# This string id is used to search for next and previous record
+	# in the list.
+	my $order;
+	foreach $i($cur_idx .. $last_idx) {
+		$order_num = $i + 1;
+		$temp = $ref_ary->[$i];
+
+		# Keep track of the first and the last elements.
+		if ($i == 0) {
+			$order = $temp->[0] . "_" . $i . "_f";
+		}
+		elsif ($i == $#$ref_ary) {
+			$order = $temp->[0] . "_" . $i . "_l";
+		}
+		else {
+			$order = $temp->[0] . "_" . $i . "_m";
+		}
+
+		if (@$ref_ary == 1) {
+			$order = $order . "_s";
+		}
+		else {
+			$order = $order . "_m";
+		}
+
+		print '<Tr>';
+#		print "<td><input type=radio name=item value=$temp->[0]><\/td>";
+		print "<td>$order_num<\/td>";
+		print "<td><a href=$script?sid=$order&sd=true&opts=$opts>$temp->[2], $temp->[1]<\/a><\/td>";
+		print "<td>$temp->[8]<\/td>";
+		print "<td>$depts{$temp->[10]}<\/td>";
+		print "<td>$temp->[11]<\/td>";
+		print "<td><a href=mailto:$temp->[4]>$temp->[4]<\/a><\/td>";
+		print "<td>$temp->[13]<\/td>";
+		print "<td>$temp->[12]<\/td>";
+		print '</Tr>';
+	} 
+
+	print '</table>';
+
+	return @$ref_ary;
+
+} # End ListHeaderTitle
+
+
+sub AddEntry {
+# Description: Add a new entry to the database.
+# Input: Information of the new entry.
+# Output: 0 for succeed .
+#	  1 if first name is missing.
+#	  2 if last name is missing.
+#	  3 if title is not valid.
+#	  4 if the new entry is duplicated.
+
+	my $firstname = shift @_;
+	my $lastname = shift @_;
+	my $ssn = shift @_;
+	my $title = shift @_;
+	my $email = shift @_;
+	my $phone = shift @_;
+	my $building = shift @_;
+	my $room = shift @_;
+	my $dept = shift @_;
+	my $employmentstatus = shift @_;
+	my $notes = shift @_;
+
+	# Check for presence of the first name.
+	if ($firstname eq '') {
+		return 1;
+	}
+	$firstname = ucfirst lc $firstname;
+	$firstname =~ s/-([A-Za-z0-9]+)/-\L\u$1/g;
+	
+	# Check for presence of the last name.
+	if ($lastname eq '') {
+		return 2;
+	}
+	$lastname = ucfirst lc $lastname;
+	$lastname =~ s/-([A-Za-z0-9]+)/-\L\u$1/g;
+	
+	# Check for valid title.
+	if ($title eq 'Not Available') {
+		return 3;
+	}
+
+	if ($ssn eq '') {
+		$ssn = $mt;
+	}
+
+	if ($email eq '') {
+		$email = $mt;
+	}
+
+	if ($phone eq '') {
+		$phone = $mt;
+	}
+
+	if ($room eq '') {
+		$room = $mt;
+	}
+
+	# We get the login and password to access the database
+	open(FILE,"/home/httpd/.jobDBAccess");
+	$DBlogin = <FILE>;
+	$DBpassword = <FILE>;
+	# Let's get rid of that newline character
+	chop $DBlogin;
+	chop $DBpassword;
+
+	my $dbh = DBI->connect('DBI:Oracle:', $DBlogin, $DBpassword, {PrintError => 1,RaiseError =>1 })
+	    or die "connecting:  $DBI::errstr";
+
+	# Check for duplicated entry.
+	my $sth = $dbh->prepare(qq{SELECT * FROM employee, position WHERE
+			(employee.firstname='$firstname'
+			AND employee.lastname='$lastname')
+			AND (position.title='$title'
+			AND employee.id=position.employeeid)});
+	$sth->execute or die "Executing: $sth->errstr";
+	my @row = $sth->fetchrow_array;
+	if (@row != ()) {
+		$dbh->disconnect;
+		return 4;
+	}
+	$sth->finish;
+
+	# Generate an unique id number.
+	$sth = $dbh->prepare(qq{SELECT * FROM employee ORDER by id});
+	$sth->execute or die "Executing: $sth->errstr";
+	my $ary_ref = $sth->fetchall_arrayref;
+	$sth->finish;
+	my $last_element = $ary_ref->[$#ary_ref];
+	my $id = $last_element->[0] + 1;
+
+	# Everything went well, insert new entry into the position table.
+	$sth = $dbh->prepare(qq{INSERT into employee values(?,?,?,?,?,?,?)});
+	$sth->bind_param(1, $id);
+	$sth->bind_param(2, $firstname);
+	$sth->bind_param(3, $lastname);
+	$sth->bind_param(4, $ssn);
+	$sth->bind_param(5, $email);
+	$sth->bind_param(6, $employmentstatus);
+	$sth->bind_param(7, $notes);
+	$sth->execute or die "Executing: $sth->errstr";
+	$sth->finish;
+
+	# Now insert other information into the employee table.
+	$sth = $dbh->prepare(qq{UPDATE position SET title='$title',
+				staffdept='$dept',
+				phone='$phone',
+				building='$building',
+				roomnumber='$room'
+				WHERE positionid='$id'});
+	$sth->execute or die "Executing: $sth->errstr";
+	$sth->finish;
+
+	$dbh->disconnect;
+	return 0;
+	
+} # End AddEntry.
+
+
+sub Form {
+# Description: display a form for adding, editing, removing, or viewing an entry.
+# Input: None if display an empty form for adding a new entry.
+#        Flag, id number, First name, and last name OR
+# Output: String describe the error if any.
+
+	# Declare local variables.
+	my $id = 0;
+	my $firstname = '""';
+	my $lastname = '""';
+	my $ssn = '""';
+	my $email = '""';
+	my $status = 'FULL-TIME';
+	my $notes = '';
+#	my $positionid;
+	my $title = 'Not Available';
+	my $phone = '""';
+	my $building = 'Engineering Building';
+	my $room = '""';
+	my $dept = '""';
+#	my $employeeid;
+
+	# We get the login and password to access the database
+	open(FILE,"/home/httpd/.jobDBAccess");
+	$DBlogin = <FILE>;
+	$DBpassword = <FILE>;
+	# Let's get rid of that newline character
+	chop $DBlogin;
+	chop $DBpassword;
+
+	my $dbh = DBI->connect('DBI:Oracle:', $DBlogin, $DBpassword, {PrintError => 1,RaiseError =>1 })
+	    or die "connecting:  $DBI::errstr";
+
+	# Check if any argument is passed in.
+	if (@_) {
+		my $flag = shift @_;
+
+		# Have to query information in the database.
+		if ($flag eq 'true') {
+			$id = shift @_;
+			my $handle = $dbh->prepare(qq{SELECT * FROM employee,
+					position WHERE
+					employee.id='$id' AND
+					position.employeeid='$id'});
+			$handle->execute or die "Executing: $handle->errstr";
+			my @record = $handle->fetchrow_array;	
+
+		#	$id = $record[0];
+			$firstname = $record[1];
+			$lastname = $record[2];
+			$ssn = $record[3];
+			$email = $record[4];
+			$status = $record[5];
+			$notes = $record[6];
+		#	$positionid = $record[7];
+			$title = $record[8];
+		#	$employeeid = $record[9];
+			$dept = $record[10];
+			$phone = $record[11];
+			$building = $record[12];
+			$room = $record[13];
+		}
+
+		#Don't have to query information because they are passed in. 
+		elsif ($flag eq 'false') {
+			my $temp = shift @_;
+
+		#	$id = $temp->[0];
+			$firstname = $temp->[1];
+			$lastname = $temp->[2];
+			$ssn = $temp->[3];
+			$email = $temp->[4];
+			$status = $temp->[5];
+			$notes = $temp->[6];
+		#	$positionid = $temp->[7];
+			$title = $temp->[8];
+		#	$employeeid = $temp->[9];
+			$dept = $temp->[10];
+			$phone = $temp->[11];
+			$building = $temp->[12];
+			$room = $temp->[13];
+		}		
+
+		else {
+			if ($_[0] ne '') {$firstname = $_[0];}
+			if ($_[1] ne '') {$lastname = $_[1];}
+			if ($_[2] ne '') {$ssn = $_[2];}
+			$title = $_[3];
+			if ($_[4] ne '') {$email = $_[4];}
+			if ($_[5] ne '') {$phone = $_[5];}
+			$building = $_[6];
+			if ($_[7] ne '') {$room = $_[7];}
+			$dept = $_[8];
+			$status = $_[9];
+			if ($_[10] ne '') {$notes = $_[10];}
+		}		
+	}
+
+	# Query the list of department from table 'staffdept'.
+	# This list is used for pupup menu.
+	#my $sth = $dbh->prepare(qq{SELECT *
+	#			FROM staffdept});
+	#$sth->execute or die "Executing: $sth->errstr";
+	#while (@row = $sth->fetchrow_array) {
+	#	$depts{$row[0]}=$row[1];
+	#}
+	#$sth->finish;
+	my $ref_deptlist = GetDeptList();
+	foreach $i (0 .. $#$ref_deptlist) {
+		$j = $ref_deptlist->[$i];
+		$depts{$j->[0]}=$j->[1];
+	}
+
+	# Display a note on message board.
+	print "<center><hr width=30%><br>\n";
+	print "<i>Note<\/i>: (*) fields are required fields.\n";
+	print "<br><br><hr width=30%><\/center><br><br>\n";
+
+	# Format information onto the form.
+	print "<table border=0 align=center cellpadding=0 cellspacing=4>\n";
+	print "<Tr>\n";
+	print '<td align=right>First name:(*)</td>', "\n";
+	print "<td align=left><input type=text name=firstname value=$firstname size=16 maxlength=16><\/td>\n";
+	print "<td align=right>Last name:(*)<\/td>\n";
+	print "<td align=left><input type=text name=lastname value=$lastname size=16 maxlength=16><\/td>\n";
+	print "<\/Tr>\n";
+
+	print "<Tr>\n";
+	print "<td align=right>SSN:<\/td>\n";
+	print "<td align=left><input type=text name=ssn value=$ssn size=9 maxlength=9><\/td>\n";
+	print "<td align=right>Title:(*)<\/td>\n";
+	print "<td><select name=title>\n";
+	foreach $index(0 .. $#titles) {
+		if ($titles[$index] eq $title) {
+			print "<option selected> $titles[$index]\n";
+		}
+		else {
+			print "<option> $titles[$index]\n";
+		}
+	}
+	print "<\/select><\/td>\n";
+	print "<\/Tr>\n";
+	print "<Tr>\n";
+	print "<td align=right>Email:<\/td>\n";
+	print "<td align=left><input type=text name=email value=$email size=32 maxlength=32><\/td>\n";
+	print "<td align=right>Phone:<\/td>\n";
+	print "<td align=left><input type=text name=phone value=$phone size=9 maxlength=9><\/td>\n";
+	print "<\/Tr>\n";
+	print "<Tr>\n";
+	print "<td align=right>Building:<\/td>\n";
+	print "<td><select name=building>\n";
+	foreach $i (sort { $buildings{$a} cmp $buildings{$b} }
+			keys %buildings) {
+		if ($building eq $i) {
+			print "<option value=$i selected> $buildings{$i}\n";
+		}
+		else {
+			print "<option value=$i> $buildings{$i}\n";
+		}
+	}
+	print "<\/select><\/td>\n";
+	print "<td align=right>Room number:<\/td>\n";
+	print "<td align=left><input type=text name=room value=$room size=9 maxlength=9><\/td>\n";
+	print "<\/Tr>\n";
+	print "<Tr>\n";
+	print "<td align=right>Department:<\/td>\n";
+	print "<td><select name=dept>\n";
+	foreach $i (sort { $depts{$a} cmp $depts{$b} }
+			keys %depts) {
+		if ($dept eq $i) {
+			print "<option value=$i selected> $depts{$i}\n";
+		}
+		else {
+			print "<option value=$i> $depts{$i}\n";
+		}
+	}
+	print "<\/select><\/td>\n";
+	print "<td align=right>Status:<\/td>\n";
+	print "<td><select name=status>\n";
+	foreach $i (sort { $status{$a} cmp $status{$b} }
+			keys %status) {
+		if ($status eq $i) {
+			print "<option value=$i selected> $status{$i}\n";
+		}
+		else {
+			print "<option value=$i> $status{$i}\n";
+		}
+	}
+	print "<\/select><\/td>\n";
+	print "<\/Tr>\n";
+	print "<td align=right>Notes:(Limited to 2 lines)<\/td>\n";
+	print "<td align=center colspan=3>";
+	print "<textarea name=notes rows=2 cols=30 wrap=soft>\n";
+	print "$notes<\/textarea>\n";
+
+	print "<\/table>\n"; 
+
+} # End AddForm
+
+sub UpdateEntry {
+# Description: Update new information to an existing entry.
+# Input: New Information.
+# Output: 0 for succeed .
+#	  1 if first name is missing.
+#	  2 if last name is missing.
+#	  3 if Title is missing.
+#	  4 if entry is duplicated.
+
+	my $id = shift @_;
+	my $firstname = shift @_;
+	my $lastname = shift @_;;
+	my $ssn = shift @_;
+	my $title = shift @_;
+	my $email = shift @_;
+	my $phone = shift @_;
+	my $building = shift @_;
+	my $room = shift @_;
+	my $dept = shift @_;
+	my $employmentstatus = shift @_;
+	my $notes = shift @_;
+
+	# Check for presence of the first name.
+	if ($firstname eq '') {
+		return 1;
+	}
+	$firstname = ucfirst lc $firstname;
+	$firstname =~ s/-([A-Za-z0-9]+)/-\L\u$1/g;
+	
+	# Check for presence of the last name.
+	if ($lastname eq '') {
+		return 2;
+	}
+	$lastname = ucfirst lc $lastname;
+	$lastname =~ s/-([A-Za-z0-9]+)/-\L\u$1/g;
+	
+	# Check for valid title.
+	if ($title eq 'Not Available') {
+		return 3;
+	}
+
+	if ($ssn eq '') {
+		$ssn = $mt;
+	}
+
+	if ($email eq '') {
+		$email = $mt;
+	}
+
+	if ($phone eq '') {
+		$phone = $mt;
+	}
+
+	if ($room eq '') {
+		$room = $mt;
+	}
+
+	# We get the login and password to access the database
+	open(FILE,"/home/httpd/.jobDBAccess");
+	$DBlogin = <FILE>;
+	$DBpassword = <FILE>;
+	# Let's get rid of that newline character
+	chop $DBlogin;
+	chop $DBpassword;
+
+	my $dbh = DBI->connect('DBI:Oracle:', $DBlogin, $DBpassword, {PrintError => 1,RaiseError =>1 })
+	    or die "connecting:  $DBI::errstr";
+
+	# Check for duplicated entry.
+	my $sth = $dbh->prepare(qq{SELECT * FROM employee, position WHERE
+			employee.id!='$id'
+			AND (employee.firstname='$firstname'
+			AND employee.lastname='$lastname')
+			AND (position.title='$title'
+			AND employee.id=position.employeeid)});
+	$sth->execute or die "Executing: $sth->errstr";
+	my @row = $sth->fetchrow_array;
+	if (@row != ()) {
+		$dbh->disconnect;
+		return 4;
+	}
+	$sth->finish;
+
+	# Everything went well, insert new entry into the position table.
+	$sth = $dbh->prepare(qq{UPDATE employee SET
+				firstname='$firstname',
+				lastname='$lastname',
+				ssn='$ssn',
+				email='$email',
+				employeestatus='$employmentstatus',
+				notes='$notes'
+				WHERE id='$id'});
+	$sth->execute or die "Executing: $sth->errstr";
+	$sth->finish;
+
+	# Now insert other information into the employee table.
+	$sth = $dbh->prepare(qq{UPDATE position SET
+				title='$title',
+				staffdept='$dept',
+				phone='$phone',
+				building='$building',
+				roomnumber='$room'
+				WHERE employeeid='$id'});
+	$sth->execute or die "Executing: $sth->errstr";
+	$sth->finish;
+
+	$dbh->disconnect;
+	return 0;
+
+}	#End UpdateEntry
+
+1;
